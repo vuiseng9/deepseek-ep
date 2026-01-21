@@ -1,0 +1,38 @@
+nvcr.io/nvidia/pytorch:25.06-py3
+
+Note: As of this commit, DeepEP is not enabled to compiled with cuda 13 yet.
+This is image is the last/most recent from nvidia with cuda12 and pytorch
+
+
+ln -s /usr/lib/x86_64-linux-gnu/libmlx5.so.1 /usr/lib/x86_64-linux-gnu/libmlx5.so
+
+pip install nvidia-nvshmem-cu12
+
+# find your own lib path
+cd $(get-site-packages-path)/nvidia/nvshmem/lib
+ln -s libnvshmem_host.so.3 libnvshmem_host.so
+
+# optional 
+# export NVSHMEM_DIR=$(get-site-packages-path)/nvidia/nvshmem
+# export LD_LIBRARY_PATH=${NVSHMEM_DIR}/lib:$LD_LIBRARY_PATH
+# export TORCH_CUDA_ARCH_LIST=9.0
+
+git clone https://github.com/vuiseng9/deepseek-ep -b 260120-mlmoe
+cd deepseek-ep
+NVSHMEM_DIR=$(get-site-packages-path)/nvidia/nvshmem TORCH_CUDA_ARCH_LIST=9.0 python setup.py install
+python tests/test_intranode.py --num-processes 2
+
+https://github.com/vuiseng9/megatron-lm -b 260120-2f3fa0-deepep
+cd megatron-lm/examples/gpt3
+make install-dependencies
+make prepare-ds-openwebtext-10k
+make 101-gpt2xl-dp1-gbs1-bf16
+
+make 900-moe
+change number of gpu in scripts/moe.sh, EP degree
+for deepep
+    --moe-enable-deepep
+    --moe-router-dtype fp32
+    --moe-token-dispatcher-type flex
+
+[--moe-token-dispatcher-type {allgather,alltoall,flex}]
