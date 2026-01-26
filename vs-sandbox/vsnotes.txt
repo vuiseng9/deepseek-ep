@@ -1,0 +1,75 @@
+Dependency
+
+third-party/README.md
+* details how to install nvshmem and config. 
+  It includes the config requiring bare metal instances for multi-node case.
+  For intranode case, we can just rely on torch because
+  it comes with nvidia-nvshmem-cu12/13 from pypi. 
+  
+    note that cuda driver could be ahead, compilation uses nvcc version
+    align torch version to version of nvcc, and use corresponding torch
+
+    At the end of Jan 2026, DeepEP are pretty much still with cu12, 
+    so whenever in doubt, just use 12.8/9.
+
+    We first show how to use torch/pypi/shmem to set up deepep.
+    Note that we could get this working on intranode
+    but not internode , it seems compilation was forcing GDRCopy.
+    We will try another way. AR. revisit this write up
+
+
+    ### how to install deepep usign pypi nvshemem
+
+      install-torch 128 (include nvidia-nvshmem-cu12==3.3.20)
+      * Installation via pip does not come with nvshmem* cli (bin tools), only lib and header.
+        e.g.
+        $ ls ~/miniforge3/lib/python3.12/site-packages/nvidia/nvshmem
+        include  lib
+
+      pip install ninja
+
+      sudo apt-get update
+      sudo apt-get install -y rdma-core libibverbs-dev librdmacm-dev
+      sudo apt-get install -y build-essential
+
+      # check exists:
+      ls -l /usr/include/infiniband/mlx5dv.h
+
+      # find your own lib path
+      cd $(get-site-packages-path)/nvidia/nvshmem/lib
+      ln -s libnvshmem_host.so.3 libnvshmem_host.so
+
+      # build for Hopper 9.0 ootb
+      NVSHMEM_DIR=$(get-site-packages-path)/nvidia/nvshmem python setup.py install
+
+### Intranode
+
+
+
+### Internode Setup
+### On Voltage Park 2 nodes of H100
+    - Bare Metal Deployment
+    - 3.2 Tbps Infiniband
+    - 2 Nodes
+    - Specs per node:
+    - 8x NVIDIA H100 SXM5
+    - 104 Intel Xeon Platinum 8470 CPUs
+    - 1024GB DDR5 RAM
+    - 18331GB NVMe Storage
+
+'3.2 Tbps InfiniBand connectivity' on an 8×H100 node almost always means:
+8 × 400 Gb/s ports (typically one CX7 400G NIC per GPU), aggregated
+
+Per direction vs bidirectional
+InfiniBand links are full duplex, so the per-direction line rate for one 400G port is:
+400 Gb/s per direction → 50 GB/s per direction (raw)
+
+So for the whole node (8 ports), the headline number is:
+3.2 Tb/s per direction (aggregate)
+and 6.4 Tb/s bidirectional aggregate (if you count both directions simultaneously)
+
+A good mental model:
+  Spec ceiling per port: ~50 GB/s per bi-direction
+  Spec ceiling per node (8 ports): ~400 GB/s per direction
+  Observed sustained: often some fraction of that, depending on NCCL algorithm, message sizes, rail/port utilization, and topology placement.
+

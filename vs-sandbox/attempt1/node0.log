@@ -1,0 +1,596 @@
+2nxh200-1:89228:89228 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+2nxh200-1:89228:89228 [0] NCCL INFO Bootstrap: Using eth0:10.13.114.101<0>
+2nxh200-1:89228:89228 [0] NCCL INFO cudaDriverVersion 13000
+2nxh200-1:89228:89228 [0] NCCL INFO NCCL version 2.27.5+cuda12.9
+2nxh200-1:89230:89230 [2] NCCL INFO cudaDriverVersion 13000
+2nxh200-1:89230:89230 [2] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+2nxh200-1:89230:89230 [2] NCCL INFO Bootstrap: Using eth0:10.13.114.101<0>
+2nxh200-1:89230:89230 [2] NCCL INFO NCCL version 2.27.5+cuda12.9
+2nxh200-1:89230:89230 [2] NCCL INFO Comm config Blocking set to 1
+2nxh200-1:89235:89235 [7] NCCL INFO cudaDriverVersion 13000
+2nxh200-1:89229:89229 [1] NCCL INFO cudaDriverVersion 13000
+2nxh200-1:89235:89235 [7] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+2nxh200-1:89235:89235 [7] NCCL INFO Bootstrap: Using eth0:10.13.114.101<0>
+2nxh200-1:89235:89235 [7] NCCL INFO NCCL version 2.27.5+cuda12.9
+2nxh200-1:89229:89229 [1] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+2nxh200-1:89231:89231 [3] NCCL INFO cudaDriverVersion 13000
+2nxh200-1:89229:89229 [1] NCCL INFO Bootstrap: Using eth0:10.13.114.101<0>
+2nxh200-1:89229:89229 [1] NCCL INFO NCCL version 2.27.5+cuda12.9
+2nxh200-1:89235:89235 [7] NCCL INFO Comm config Blocking set to 1
+2nxh200-1:89231:89231 [3] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+2nxh200-1:89231:89231 [3] NCCL INFO Bootstrap: Using eth0:10.13.114.101<0>
+2nxh200-1:89231:89231 [3] NCCL INFO NCCL version 2.27.5+cuda12.9
+2nxh200-1:89229:89229 [1] NCCL INFO Comm config Blocking set to 1
+2nxh200-1:89234:89234 [6] NCCL INFO cudaDriverVersion 13000
+2nxh200-1:89232:89232 [4] NCCL INFO cudaDriverVersion 13000
+2nxh200-1:89234:89234 [6] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+2nxh200-1:89232:89232 [4] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+2nxh200-1:89234:89234 [6] NCCL INFO Bootstrap: Using eth0:10.13.114.101<0>
+2nxh200-1:89234:89234 [6] NCCL INFO NCCL version 2.27.5+cuda12.9
+2nxh200-1:89231:89231 [3] NCCL INFO Comm config Blocking set to 1
+2nxh200-1:89232:89232 [4] NCCL INFO Bootstrap: Using eth0:10.13.114.101<0>
+2nxh200-1:89232:89232 [4] NCCL INFO NCCL version 2.27.5+cuda12.9
+2nxh200-1:89232:89232 [4] NCCL INFO Comm config Blocking set to 1
+2nxh200-1:89234:89234 [6] NCCL INFO Comm config Blocking set to 1
+2nxh200-1:89233:89233 [5] NCCL INFO cudaDriverVersion 13000
+2nxh200-1:89233:89233 [5] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+2nxh200-1:89233:89233 [5] NCCL INFO Bootstrap: Using eth0:10.13.114.101<0>
+2nxh200-1:89233:89233 [5] NCCL INFO NCCL version 2.27.5+cuda12.9
+2nxh200-1:89233:89233 [5] NCCL INFO Comm config Blocking set to 1
+2nxh200-1:89228:89228 [0] NCCL INFO Comm config Blocking set to 1
+2nxh200-1:89230:89930 [2] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+2nxh200-1:89230:89930 [2] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+2nxh200-1:89230:89930 [2] NCCL INFO NCCL_IB_HCA set to mlx5_0,mlx5_1,mlx5_2,mlx5_3,mlx5_5,mlx5_6,mlx5_7
+2nxh200-1:89235:89931 [7] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+2nxh200-1:89235:89931 [7] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+2nxh200-1:89235:89931 [7] NCCL INFO NCCL_IB_HCA set to mlx5_0,mlx5_1,mlx5_2,mlx5_3,mlx5_5,mlx5_6,mlx5_7
+2nxh200-1:89229:89932 [1] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+2nxh200-1:89229:89932 [1] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+2nxh200-1:89229:89932 [1] NCCL INFO NCCL_IB_HCA set to mlx5_0,mlx5_1,mlx5_2,mlx5_3,mlx5_5,mlx5_6,mlx5_7
+2nxh200-1:89231:89933 [3] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+2nxh200-1:89231:89933 [3] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+2nxh200-1:89231:89933 [3] NCCL INFO NCCL_IB_HCA set to mlx5_0,mlx5_1,mlx5_2,mlx5_3,mlx5_5,mlx5_6,mlx5_7
+2nxh200-1:89232:89934 [4] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+2nxh200-1:89232:89934 [4] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+2nxh200-1:89232:89934 [4] NCCL INFO NCCL_IB_HCA set to mlx5_0,mlx5_1,mlx5_2,mlx5_3,mlx5_5,mlx5_6,mlx5_7
+2nxh200-1:89234:89935 [6] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+2nxh200-1:89234:89935 [6] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+2nxh200-1:89234:89935 [6] NCCL INFO NCCL_IB_HCA set to mlx5_0,mlx5_1,mlx5_2,mlx5_3,mlx5_5,mlx5_6,mlx5_7
+2nxh200-1:89233:89936 [5] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+2nxh200-1:89233:89936 [5] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+2nxh200-1:89233:89936 [5] NCCL INFO NCCL_IB_HCA set to mlx5_0,mlx5_1,mlx5_2,mlx5_3,mlx5_5,mlx5_6,mlx5_7
+2nxh200-1:89230:89930 [2] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [2]mlx5_2:1/IB [3]mlx5_3:1/IB [4]mlx5_5:1/IB [5]mlx5_6:1/IB [6]mlx5_7:1/IB [RO]; OOB eth0:10.13.114.101<0>
+2nxh200-1:89230:89930 [2] NCCL INFO Initialized NET plugin IB
+2nxh200-1:89230:89930 [2] NCCL INFO Assigned NET plugin IB to comm
+2nxh200-1:89230:89930 [2] NCCL INFO Using network IB
+2nxh200-1:89235:89931 [7] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [2]mlx5_2:1/IB [3]mlx5_3:1/IB [4]mlx5_5:1/IB [5]mlx5_6:1/IB [6]mlx5_7:1/IB [RO]; OOB eth0:10.13.114.101<0>
+2nxh200-1:89235:89931 [7] NCCL INFO Initialized NET plugin IB
+2nxh200-1:89235:89931 [7] NCCL INFO Assigned NET plugin IB to comm
+2nxh200-1:89235:89931 [7] NCCL INFO Using network IB
+2nxh200-1:89229:89932 [1] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [2]mlx5_2:1/IB [3]mlx5_3:1/IB [4]mlx5_5:1/IB [5]mlx5_6:1/IB [6]mlx5_7:1/IB [RO]; OOB eth0:10.13.114.101<0>
+2nxh200-1:89229:89932 [1] NCCL INFO Initialized NET plugin IB
+2nxh200-1:89229:89932 [1] NCCL INFO Assigned NET plugin IB to comm
+2nxh200-1:89229:89932 [1] NCCL INFO Using network IB
+2nxh200-1:89231:89933 [3] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [2]mlx5_2:1/IB [3]mlx5_3:1/IB [4]mlx5_5:1/IB [5]mlx5_6:1/IB [6]mlx5_7:1/IB [RO]; OOB eth0:10.13.114.101<0>
+2nxh200-1:89231:89933 [3] NCCL INFO Initialized NET plugin IB
+2nxh200-1:89231:89933 [3] NCCL INFO Assigned NET plugin IB to comm
+2nxh200-1:89231:89933 [3] NCCL INFO Using network IB
+2nxh200-1:89232:89934 [4] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [2]mlx5_2:1/IB [3]mlx5_3:1/IB [4]mlx5_5:1/IB [5]mlx5_6:1/IB [6]mlx5_7:1/IB [RO]; OOB eth0:10.13.114.101<0>
+2nxh200-1:89232:89934 [4] NCCL INFO Initialized NET plugin IB
+2nxh200-1:89232:89934 [4] NCCL INFO Assigned NET plugin IB to comm
+2nxh200-1:89232:89934 [4] NCCL INFO Using network IB
+2nxh200-1:89234:89935 [6] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [2]mlx5_2:1/IB [3]mlx5_3:1/IB [4]mlx5_5:1/IB [5]mlx5_6:1/IB [6]mlx5_7:1/IB [RO]; OOB eth0:10.13.114.101<0>
+2nxh200-1:89234:89935 [6] NCCL INFO Initialized NET plugin IB
+2nxh200-1:89234:89935 [6] NCCL INFO Assigned NET plugin IB to comm
+2nxh200-1:89234:89935 [6] NCCL INFO Using network IB
+2nxh200-1:89233:89936 [5] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [2]mlx5_2:1/IB [3]mlx5_3:1/IB [4]mlx5_5:1/IB [5]mlx5_6:1/IB [6]mlx5_7:1/IB [RO]; OOB eth0:10.13.114.101<0>
+2nxh200-1:89233:89936 [5] NCCL INFO Initialized NET plugin IB
+2nxh200-1:89233:89936 [5] NCCL INFO Assigned NET plugin IB to comm
+2nxh200-1:89233:89936 [5] NCCL INFO Using network IB
+2nxh200-1:89230:89930 [2] NCCL INFO DMA-BUF is available on GPU device 2
+2nxh200-1:89230:89930 [2] NCCL INFO ncclCommInitRankConfig comm 0x62347b379e40 rank 2 nranks 16 cudaDev 2 nvmlDev 2 busId 72000 commId 0xcf8002fe8a6ad411 - Init START
+2nxh200-1:89235:89931 [7] NCCL INFO DMA-BUF is available on GPU device 7
+2nxh200-1:89229:89932 [1] NCCL INFO DMA-BUF is available on GPU device 1
+2nxh200-1:89235:89931 [7] NCCL INFO ncclCommInitRankConfig comm 0x5dc92e664da0 rank 7 nranks 16 cudaDev 7 nvmlDev 7 busId db000 commId 0xcf8002fe8a6ad411 - Init START
+2nxh200-1:89228:89937 [0] NCCL INFO NET/Plugin: Could not find: libnccl-net.so. 
+2nxh200-1:89228:89937 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to eth0
+2nxh200-1:89228:89937 [0] NCCL INFO NCCL_IB_HCA set to mlx5_0,mlx5_1,mlx5_2,mlx5_3,mlx5_5,mlx5_6,mlx5_7
+2nxh200-1:89229:89932 [1] NCCL INFO ncclCommInitRankConfig comm 0x5c746f7d3ff0 rank 1 nranks 16 cudaDev 1 nvmlDev 1 busId 6c000 commId 0xcf8002fe8a6ad411 - Init START
+2nxh200-1:89231:89933 [3] NCCL INFO DMA-BUF is available on GPU device 3
+2nxh200-1:89234:89935 [6] NCCL INFO DMA-BUF is available on GPU device 6
+2nxh200-1:89231:89933 [3] NCCL INFO ncclCommInitRankConfig comm 0x5b91ab360d60 rank 3 nranks 16 cudaDev 3 nvmlDev 3 busId 76000 commId 0xcf8002fe8a6ad411 - Init START
+2nxh200-1:89230:89930 [2] NCCL INFO RAS client listening socket at ::1<28028>
+2nxh200-1:89232:89934 [4] NCCL INFO DMA-BUF is available on GPU device 4
+2nxh200-1:89234:89935 [6] NCCL INFO ncclCommInitRankConfig comm 0x5c7012db0cf0 rank 6 nranks 16 cudaDev 6 nvmlDev 6 busId d5000 commId 0xcf8002fe8a6ad411 - Init START
+2nxh200-1:89233:89936 [5] NCCL INFO DMA-BUF is available on GPU device 5
+2nxh200-1:89232:89934 [4] NCCL INFO ncclCommInitRankConfig comm 0x65082ed09530 rank 4 nranks 16 cudaDev 4 nvmlDev 4 busId cc000 commId 0xcf8002fe8a6ad411 - Init START
+2nxh200-1:89233:89936 [5] NCCL INFO ncclCommInitRankConfig comm 0x56bd066e57f0 rank 5 nranks 16 cudaDev 5 nvmlDev 5 busId d0000 commId 0xcf8002fe8a6ad411 - Init START
+2nxh200-1:89234:89935 [6] NCCL INFO RAS client listening socket at ::1<28028>
+2nxh200-1:89231:89933 [3] NCCL INFO RAS client listening socket at ::1<28028>
+2nxh200-1:89233:89936 [5] NCCL INFO RAS client listening socket at ::1<28028>
+2nxh200-1:89232:89934 [4] NCCL INFO RAS client listening socket at ::1<28028>
+2nxh200-1:89228:89937 [0] NCCL INFO NET/IB : Using [0]mlx5_0:1/IB [1]mlx5_1:1/IB [2]mlx5_2:1/IB [3]mlx5_3:1/IB [4]mlx5_5:1/IB [5]mlx5_6:1/IB [6]mlx5_7:1/IB [RO]; OOB eth0:10.13.114.101<0>
+2nxh200-1:89228:89937 [0] NCCL INFO Initialized NET plugin IB
+2nxh200-1:89228:89937 [0] NCCL INFO Assigned NET plugin IB to comm
+2nxh200-1:89228:89937 [0] NCCL INFO Using network IB
+2nxh200-1:89228:89937 [0] NCCL INFO DMA-BUF is available on GPU device 0
+2nxh200-1:89228:89937 [0] NCCL INFO ncclCommInitRankConfig comm 0x57baff590090 rank 0 nranks 16 cudaDev 0 nvmlDev 0 busId 68000 commId 0xcf8002fe8a6ad411 - Init START
+2nxh200-1:89229:89932 [1] NCCL INFO RAS client listening socket at ::1<28028>
+2nxh200-1:89235:89931 [7] NCCL INFO RAS client listening socket at ::1<28028>
+2nxh200-1:89228:89937 [0] NCCL INFO RAS client listening socket at ::1<28028>
+2nxh200-1:89228:89937 [0] NCCL INFO Bootstrap timings total 5.624664 (create 0.000048, send 0.000143, recv 0.000134, ring 0.002875, delay 0.000000)
+2nxh200-1:89235:89931 [7] NCCL INFO Bootstrap timings total 5.814927 (create 0.000073, send 0.000205, recv 4.677616, ring 1.135492, delay 0.000000)
+2nxh200-1:89233:89936 [5] NCCL INFO Bootstrap timings total 5.765412 (create 0.000035, send 0.000115, recv 0.000073, ring 5.764469, delay 0.000000)
+2nxh200-1:89232:89934 [4] NCCL INFO Bootstrap timings total 5.765437 (create 0.000050, send 0.000147, recv 0.000254, ring 5.764368, delay 0.000000)
+2nxh200-1:89231:89933 [3] NCCL INFO Bootstrap timings total 5.774830 (create 0.000049, send 0.000129, recv 0.009579, ring 5.764504, delay 0.000000)
+2nxh200-1:89229:89932 [1] NCCL INFO Bootstrap timings total 5.802558 (create 0.000068, send 0.000197, recv 0.000142, ring 5.622644, delay 0.000001)
+2nxh200-1:89230:89930 [2] NCCL INFO Bootstrap timings total 5.870053 (create 0.000053, send 0.000164, recv 0.095388, ring 5.773608, delay 0.000000)
+2nxh200-1:89234:89935 [6] NCCL INFO Bootstrap timings total 5.770891 (create 0.000053, send 0.000171, recv 0.000064, ring 5.764603, delay 0.000000)
+2nxh200-1:89233:89936 [5] NCCL INFO MNNVL busId 0xd0000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+2nxh200-1:89231:89933 [3] NCCL INFO MNNVL busId 0x76000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+2nxh200-1:89232:89934 [4] NCCL INFO MNNVL busId 0xcc000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+2nxh200-1:89228:89937 [0] NCCL INFO MNNVL busId 0x68000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+2nxh200-1:89229:89932 [1] NCCL INFO MNNVL busId 0x6c000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+2nxh200-1:89230:89930 [2] NCCL INFO MNNVL busId 0x72000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+2nxh200-1:89235:89931 [7] NCCL INFO MNNVL busId 0xdb000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+2nxh200-1:89234:89935 [6] NCCL INFO MNNVL busId 0xd5000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+2nxh200-1:89233:89936 [5] NCCL INFO NCCL_NET_GDR_LEVEL set by environment to LOC
+2nxh200-1:89232:89934 [4] NCCL INFO NCCL_NET_GDR_LEVEL set by environment to LOC
+2nxh200-1:89234:89935 [6] NCCL INFO NCCL_NET_GDR_LEVEL set by environment to LOC
+2nxh200-1:89230:89930 [2] NCCL INFO NCCL_NET_GDR_LEVEL set by environment to LOC
+2nxh200-1:89231:89933 [3] NCCL INFO NCCL_NET_GDR_LEVEL set by environment to LOC
+2nxh200-1:89229:89932 [1] NCCL INFO NCCL_NET_GDR_LEVEL set by environment to LOC
+2nxh200-1:89228:89937 [0] NCCL INFO NCCL_NET_GDR_LEVEL set by environment to LOC
+2nxh200-1:89235:89931 [7] NCCL INFO NCCL_NET_GDR_LEVEL set by environment to LOC
+2nxh200-1:89233:89936 [5] NCCL INFO Setting affinity for GPU 5 to 88-175
+2nxh200-1:89233:89936 [5] NCCL INFO NVLS multicast support is available on dev 5 (NVLS_NCHANNELS 16)
+2nxh200-1:89234:89935 [6] NCCL INFO Setting affinity for GPU 6 to 88-175
+2nxh200-1:89234:89935 [6] NCCL INFO NVLS multicast support is available on dev 6 (NVLS_NCHANNELS 16)
+2nxh200-1:89232:89934 [4] NCCL INFO Setting affinity for GPU 4 to 88-175
+2nxh200-1:89232:89934 [4] NCCL INFO NVLS multicast support is available on dev 4 (NVLS_NCHANNELS 16)
+2nxh200-1:89231:89933 [3] NCCL INFO Setting affinity for GPU 3 to 0-87
+2nxh200-1:89231:89933 [3] NCCL INFO NVLS multicast support is available on dev 3 (NVLS_NCHANNELS 16)
+2nxh200-1:89229:89932 [1] NCCL INFO Setting affinity for GPU 1 to 0-87
+2nxh200-1:89229:89932 [1] NCCL INFO NVLS multicast support is available on dev 1 (NVLS_NCHANNELS 16)
+2nxh200-1:89228:89937 [0] NCCL INFO Setting affinity for GPU 0 to 0-87
+2nxh200-1:89228:89937 [0] NCCL INFO NVLS multicast support is available on dev 0 (NVLS_NCHANNELS 16)
+2nxh200-1:89230:89930 [2] NCCL INFO Setting affinity for GPU 2 to 0-87
+2nxh200-1:89230:89930 [2] NCCL INFO NVLS multicast support is available on dev 2 (NVLS_NCHANNELS 16)
+2nxh200-1:89235:89931 [7] NCCL INFO Setting affinity for GPU 7 to 88-175
+2nxh200-1:89235:89931 [7] NCCL INFO NVLS multicast support is available on dev 7 (NVLS_NCHANNELS 16)
+2nxh200-1:89235:89931 [7] NCCL INFO comm 0x5dc92e664da0 rank 7 nRanks 16 nNodes 2 localRanks 8 localRank 7 MNNVL 0
+2nxh200-1:89234:89935 [6] NCCL INFO comm 0x5c7012db0cf0 rank 6 nRanks 16 nNodes 2 localRanks 8 localRank 6 MNNVL 0
+2nxh200-1:89235:89931 [7] NCCL INFO NVLS Head  0:  0  8
+2nxh200-1:89231:89933 [3] NCCL INFO comm 0x5b91ab360d60 rank 3 nRanks 16 nNodes 2 localRanks 8 localRank 3 MNNVL 0
+2nxh200-1:89232:89934 [4] NCCL INFO comm 0x65082ed09530 rank 4 nRanks 16 nNodes 2 localRanks 8 localRank 4 MNNVL 0
+2nxh200-1:89235:89931 [7] NCCL INFO Trees [0] -1/-1/-1->7->6 [1] 6/-1/-1->7->0 [2] 0/-1/-1->7->6 [3] 0/-1/-1->7->6 [4] -1/-1/-1->7->6 [5] 6/-1/-1->7->0 [6] 0/-1/-1->7->6 [7] 0/-1/-1->7->6 [8] -1/-1/-1->7->6 [9] 6/-1/-1->7->0 [10] 0/-1/-1->7->6 [11] 0/-1/-1->7->6 [12] -1/-1/-1->7->6 [13] 6/-1/-1->7->0 [14] 0/-1/-1->7->6 [15] 0/-1/-1->7->6
+2nxh200-1:89235:89931 [7] NCCL INFO P2P Chunksize set to 131072
+2nxh200-1:89231:89933 [3] NCCL INFO NVLS Head  0:  0  8
+2nxh200-1:89230:89930 [2] NCCL INFO comm 0x62347b379e40 rank 2 nRanks 16 nNodes 2 localRanks 8 localRank 2 MNNVL 0
+2nxh200-1:89231:89933 [3] NCCL INFO Trees [0] 4/-1/-1->3->2 [1] 2/11/-1->3->-1 [2] 4/-1/-1->3->2 [3] 4/-1/-1->3->2 [4] 4/-1/-1->3->2 [5] 2/-1/-1->3->11 [6] 4/-1/-1->3->2 [7] 4/-1/-1->3->2 [8] 4/-1/-1->3->2 [9] 2/11/-1->3->-1 [10] 4/-1/-1->3->2 [11] 4/-1/-1->3->2 [12] 4/-1/-1->3->2 [13] 2/-1/-1->3->11 [14] 4/-1/-1->3->2 [15] 4/-1/-1->3->2
+2nxh200-1:89229:89932 [1] NCCL INFO comm 0x5c746f7d3ff0 rank 1 nRanks 16 nNodes 2 localRanks 8 localRank 1 MNNVL 0
+2nxh200-1:89232:89934 [4] NCCL INFO NVLS Head  0:  0  8
+2nxh200-1:89231:89933 [3] NCCL INFO P2P Chunksize set to 131072
+2nxh200-1:89234:89935 [6] NCCL INFO NVLS Head  0:  0  8
+2nxh200-1:89232:89934 [4] NCCL INFO Trees [0] 5/-1/-1->4->3 [1] -1/-1/-1->4->5 [2] -1/-1/-1->4->3 [3] 5/-1/-1->4->3 [4] 5/-1/-1->4->3 [5] -1/-1/-1->4->5 [6] -1/-1/-1->4->3 [7] 5/-1/-1->4->3 [8] 5/-1/-1->4->3 [9] -1/-1/-1->4->5 [10] -1/-1/-1->4->3 [11] 5/-1/-1->4->3 [12] 5/-1/-1->4->3 [13] -1/-1/-1->4->5 [14] -1/-1/-1->4->3 [15] 5/-1/-1->4->3
+2nxh200-1:89228:89937 [0] NCCL INFO comm 0x57baff590090 rank 0 nRanks 16 nNodes 2 localRanks 8 localRank 0 MNNVL 0
+2nxh200-1:89234:89935 [6] NCCL INFO Trees [0] 7/-1/-1->6->5 [1] 5/-1/-1->6->7 [2] 7/-1/-1->6->5 [3] 7/14/-1->6->-1 [4] 7/-1/-1->6->5 [5] 5/-1/-1->6->7 [6] 7/-1/-1->6->5 [7] 7/-1/-1->6->14 [8] 7/-1/-1->6->5 [9] 5/-1/-1->6->7 [10] 7/-1/-1->6->5 [11] 7/14/-1->6->-1 [12] 7/-1/-1->6->5 [13] 5/-1/-1->6->7 [14] 7/-1/-1->6->5 [15] 7/-1/-1->6->14
+2nxh200-1:89232:89934 [4] NCCL INFO P2P Chunksize set to 131072
+2nxh200-1:89233:89936 [5] NCCL INFO comm 0x56bd066e57f0 rank 5 nRanks 16 nNodes 2 localRanks 8 localRank 5 MNNVL 0
+2nxh200-1:89234:89935 [6] NCCL INFO P2P Chunksize set to 131072
+2nxh200-1:89230:89930 [2] NCCL INFO NVLS Head  0:  0  8
+2nxh200-1:89229:89932 [1] NCCL INFO NVLS Head  0:  0  8
+2nxh200-1:89230:89930 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 1/-1/-1->2->3 [2] 3/-1/-1->2->1 [3] 3/-1/-1->2->1 [4] 3/-1/-1->2->1 [5] 1/-1/-1->2->3 [6] 3/-1/-1->2->1 [7] 3/-1/-1->2->1 [8] 3/-1/-1->2->1 [9] 1/-1/-1->2->3 [10] 3/-1/-1->2->1 [11] 3/-1/-1->2->1 [12] 3/-1/-1->2->1 [13] 1/-1/-1->2->3 [14] 3/-1/-1->2->1 [15] 3/-1/-1->2->1
+2nxh200-1:89229:89932 [1] NCCL INFO Trees [0] 2/-1/-1->1->0 [1] 0/-1/-1->1->2 [2] 2/-1/-1->1->0 [3] 2/-1/-1->1->0 [4] 2/-1/-1->1->0 [5] 0/-1/-1->1->2 [6] 2/-1/-1->1->0 [7] 2/-1/-1->1->0 [8] 2/-1/-1->1->0 [9] 0/-1/-1->1->2 [10] 2/-1/-1->1->0 [11] 2/-1/-1->1->0 [12] 2/-1/-1->1->0 [13] 0/-1/-1->1->2 [14] 2/-1/-1->1->0 [15] 2/-1/-1->1->0
+2nxh200-1:89230:89930 [2] NCCL INFO P2P Chunksize set to 131072
+2nxh200-1:89229:89932 [1] NCCL INFO P2P Chunksize set to 131072
+2nxh200-1:89228:89937 [0] NCCL INFO NVLS Head  0:  0  8
+2nxh200-1:89228:89937 [0] NCCL INFO Channel 00/16 :  0  9 10 11 12 13 14 15  8  1  2  3  4  5  6  7
+2nxh200-1:89228:89937 [0] NCCL INFO Channel 01/16 :  0  7  6  5  4  3  2  1  8 15 14 13 12 11 10  9
+2nxh200-1:89228:89937 [0] NCCL INFO Channel 02/16 :  0  7  6 13 12 11 10  9  8 15 14  5  4  3  2  1
+2nxh200-1:89233:89936 [5] NCCL INFO NVLS Head  0:  0  8
+2nxh200-1:89228:89937 [0] NCCL INFO Channel 03/16 :  0  1  2  3  4  5 14 15  8  9 10 11 12 13  6  7
+2nxh200-1:89228:89937 [0] NCCL INFO Channel 04/16 :  0  9 10 11 12 13 14 15  8  1  2  3  4  5  6  7
+2nxh200-1:89228:89937 [0] NCCL INFO Channel 05/16 :  0  7  6  5  4  3  2  1  8 15 14 13 12 11 10  9
+2nxh200-1:89228:89937 [0] NCCL INFO Channel 06/16 :  0  7  6 13 12 11 10  9  8 15 14  5  4  3  2  1
+2nxh200-1:89228:89937 [0] NCCL INFO Channel 07/16 :  0  1  2  3  4  5 14 15  8  9 10 11 12 13  6  7
+2nxh200-1:89228:89937 [0] NCCL INFO Channel 08/16 :  0  9 10 11 12 13 14 15  8  1  2  3  4  5  6  7
+2nxh200-1:89228:89937 [0] NCCL INFO Channel 09/16 :  0  7  6  5  4  3  2  1  8 15 14 13 12 11 10  9
+2nxh200-1:89233:89936 [5] NCCL INFO Trees [0] 6/-1/-1->5->4 [1] 4/-1/-1->5->6 [2] 6/13/-1->5->-1 [3] -1/-1/-1->5->4 [4] 6/-1/-1->5->4 [5] 4/-1/-1->5->6 [6] 6/-1/-1->5->13 [7] -1/-1/-1->5->4 [8] 6/-1/-1->5->4 [9] 4/-1/-1->5->6 [10] 6/13/-1->5->-1 [11] -1/-1/-1->5->4 [12] 6/-1/-1->5->4 [13] 4/-1/-1->5->6 [14] 6/-1/-1->5->13 [15] -1/-1/-1->5->4
+2nxh200-1:89228:89937 [0] NCCL INFO Channel 10/16 :  0  7  6 13 12 11 10  9  8 15 14  5  4  3  2  1
+2nxh200-1:89233:89936 [5] NCCL INFO P2P Chunksize set to 131072
+2nxh200-1:89228:89937 [0] NCCL INFO Channel 11/16 :  0  1  2  3  4  5 14 15  8  9 10 11 12 13  6  7
+2nxh200-1:89228:89937 [0] NCCL INFO Channel 12/16 :  0  9 10 11 12 13 14 15  8  1  2  3  4  5  6  7
+2nxh200-1:89228:89937 [0] NCCL INFO Channel 13/16 :  0  7  6  5  4  3  2  1  8 15 14 13 12 11 10  9
+2nxh200-1:89228:89937 [0] NCCL INFO Channel 14/16 :  0  7  6 13 12 11 10  9  8 15 14  5  4  3  2  1
+2nxh200-1:89228:89937 [0] NCCL INFO Channel 15/16 :  0  1  2  3  4  5 14 15  8  9 10 11 12 13  6  7
+2nxh200-1:89228:89937 [0] NCCL INFO Trees [0] 1/8/-1->0->-1 [1] 7/-1/-1->0->1 [2] 1/-1/-1->0->7 [3] 1/-1/-1->0->7 [4] 1/-1/-1->0->8 [5] 7/-1/-1->0->1 [6] 1/-1/-1->0->7 [7] 1/-1/-1->0->7 [8] 1/8/-1->0->-1 [9] 7/-1/-1->0->1 [10] 1/-1/-1->0->7 [11] 1/-1/-1->0->7 [12] 1/-1/-1->0->8 [13] 7/-1/-1->0->1 [14] 1/-1/-1->0->7 [15] 1/-1/-1->0->7
+2nxh200-1:89228:89937 [0] NCCL INFO P2P Chunksize set to 131072
+2nxh200-1:89231:89933 [3] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+2nxh200-1:89232:89934 [4] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+2nxh200-1:89229:89932 [1] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+2nxh200-1:89231:90150 [3] NCCL INFO [Proxy Service] Device 3 CPU core 5
+2nxh200-1:89231:90151 [3] NCCL INFO [Proxy Service UDS] Device 3 CPU core 9
+2nxh200-1:89235:89931 [7] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+2nxh200-1:89234:89935 [6] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+2nxh200-1:89230:89930 [2] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+2nxh200-1:89228:89937 [0] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+2nxh200-1:89228:89937 [0] NCCL INFO Check P2P Type isAllDirectP2p 1 directMode 0
+2nxh200-1:89229:90154 [1] NCCL INFO [Proxy Service UDS] Device 1 CPU core 12
+2nxh200-1:89229:90152 [1] NCCL INFO [Proxy Service] Device 1 CPU core 10
+2nxh200-1:89232:90153 [4] NCCL INFO [Proxy Service] Device 4 CPU core 89
+2nxh200-1:89232:90156 [4] NCCL INFO [Proxy Service UDS] Device 4 CPU core 90
+2nxh200-1:89233:89936 [5] NCCL INFO PROFILER/Plugin: Could not find: libnccl-profiler.so. 
+2nxh200-1:89228:90158 [0] NCCL INFO [Proxy Service] Device 0 CPU core 30
+2nxh200-1:89234:90157 [6] NCCL INFO [Proxy Service] Device 6 CPU core 115
+2nxh200-1:89230:90159 [2] NCCL INFO [Proxy Service] Device 2 CPU core 66
+2nxh200-1:89228:90161 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 38
+2nxh200-1:89235:90160 [7] NCCL INFO [Proxy Service UDS] Device 7 CPU core 162
+2nxh200-1:89230:90163 [2] NCCL INFO [Proxy Service UDS] Device 2 CPU core 67
+2nxh200-1:89235:90155 [7] NCCL INFO [Proxy Service] Device 7 CPU core 161
+2nxh200-1:89234:90162 [6] NCCL INFO [Proxy Service UDS] Device 6 CPU core 117
+2nxh200-1:89233:90165 [5] NCCL INFO [Proxy Service UDS] Device 5 CPU core 123
+2nxh200-1:89233:90164 [5] NCCL INFO [Proxy Service] Device 5 CPU core 125
+2nxh200-1:89230:89930 [2] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+2nxh200-1:89230:89930 [2] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+2nxh200-1:89231:89933 [3] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+2nxh200-1:89231:89933 [3] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+2nxh200-1:89233:89936 [5] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+2nxh200-1:89233:89936 [5] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+2nxh200-1:89228:89937 [0] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+2nxh200-1:89228:89937 [0] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+2nxh200-1:89235:89931 [7] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+2nxh200-1:89235:89931 [7] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+2nxh200-1:89234:89935 [6] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+2nxh200-1:89234:89935 [6] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+2nxh200-1:89232:89934 [4] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+2nxh200-1:89232:89934 [4] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+2nxh200-1:89229:89932 [1] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+2nxh200-1:89229:89932 [1] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+2nxh200-1:89228:89937 [0] NCCL INFO CC Off, workFifoBytes 1048576
+2nxh200-1:89230:89930 [2] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+2nxh200-1:89230:89930 [2] NCCL INFO ncclCommInitRankConfig comm 0x62347b379e40 rank 2 nranks 16 cudaDev 2 nvmlDev 2 busId 72000 commId 0xcf8002fe8a6ad411 - Init COMPLETE
+2nxh200-1:89230:89930 [2] NCCL INFO Init timings - ncclCommInitRankConfig: rank 2 nranks 16 total 7.37 (kernels 0.24, alloc 0.83, bootstrap 5.87, allgathers 0.04, topo 0.07, graphs 0.01, connections 0.29, rest 0.02)
+2nxh200-1:89234:89935 [6] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+2nxh200-1:89234:89935 [6] NCCL INFO ncclCommInitRankConfig comm 0x5c7012db0cf0 rank 6 nranks 16 cudaDev 6 nvmlDev 6 busId d5000 commId 0xcf8002fe8a6ad411 - Init COMPLETE
+2nxh200-1:89234:89935 [6] NCCL INFO Init timings - ncclCommInitRankConfig: rank 6 nranks 16 total 7.33 (kernels 0.24, alloc 0.89, bootstrap 5.77, allgathers 0.04, topo 0.07, graphs 0.01, connections 0.28, rest 0.02)
+2nxh200-1:89228:89937 [0] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+2nxh200-1:89228:89937 [0] NCCL INFO ncclCommInitRankConfig comm 0x57baff590090 rank 0 nranks 16 cudaDev 0 nvmlDev 0 busId 68000 commId 0xcf8002fe8a6ad411 - Init COMPLETE
+2nxh200-1:89228:89937 [0] NCCL INFO Init timings - ncclCommInitRankConfig: rank 0 nranks 16 total 7.23 (kernels 0.99, alloc 0.19, bootstrap 5.62, allgathers 0.04, topo 0.07, graphs 0.01, connections 0.29, rest 0.02)
+2nxh200-1:89232:89934 [4] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+2nxh200-1:89232:89934 [4] NCCL INFO ncclCommInitRankConfig comm 0x65082ed09530 rank 4 nranks 16 cudaDev 4 nvmlDev 4 busId cc000 commId 0xcf8002fe8a6ad411 - Init COMPLETE
+2nxh200-1:89232:89934 [4] NCCL INFO Init timings - ncclCommInitRankConfig: rank 4 nranks 16 total 7.33 (kernels 0.24, alloc 0.90, bootstrap 5.77, allgathers 0.04, topo 0.07, graphs 0.01, connections 0.29, rest 0.02)
+2nxh200-1:89229:89932 [1] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+2nxh200-1:89231:89933 [3] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+2nxh200-1:89231:89933 [3] NCCL INFO ncclCommInitRankConfig comm 0x5b91ab360d60 rank 3 nranks 16 cudaDev 3 nvmlDev 3 busId 76000 commId 0xcf8002fe8a6ad411 - Init COMPLETE
+2nxh200-1:89229:89932 [1] NCCL INFO ncclCommInitRankConfig comm 0x5c746f7d3ff0 rank 1 nranks 16 cudaDev 1 nvmlDev 1 busId 6c000 commId 0xcf8002fe8a6ad411 - Init COMPLETE
+2nxh200-1:89231:89933 [3] NCCL INFO Init timings - ncclCommInitRankConfig: rank 3 nranks 16 total 7.35 (kernels 0.25, alloc 0.90, bootstrap 5.77, allgathers 0.04, topo 0.07, graphs 0.01, connections 0.29, rest 0.02)
+2nxh200-1:89229:89932 [1] NCCL INFO Init timings - ncclCommInitRankConfig: rank 1 nranks 16 total 7.35 (kernels 0.24, alloc 0.88, bootstrap 5.80, allgathers 0.04, topo 0.07, graphs 0.01, connections 0.29, rest 0.02)
+2nxh200-1:89235:89931 [7] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+2nxh200-1:89235:89931 [7] NCCL INFO ncclCommInitRankConfig comm 0x5dc92e664da0 rank 7 nranks 16 cudaDev 7 nvmlDev 7 busId db000 commId 0xcf8002fe8a6ad411 - Init COMPLETE
+2nxh200-1:89235:89931 [7] NCCL INFO Init timings - ncclCommInitRankConfig: rank 7 nranks 16 total 7.36 (kernels 0.24, alloc 0.87, bootstrap 5.81, allgathers 0.04, topo 0.07, graphs 0.01, connections 0.28, rest 0.02)
+2nxh200-1:89233:89936 [5] NCCL INFO TUNER/Plugin: Could not find: libnccl-tuner.so. Using internal tuner plugin.
+2nxh200-1:89233:89936 [5] NCCL INFO ncclCommInitRankConfig comm 0x56bd066e57f0 rank 5 nranks 16 cudaDev 5 nvmlDev 5 busId d0000 commId 0xcf8002fe8a6ad411 - Init COMPLETE
+2nxh200-1:89233:89936 [5] NCCL INFO Init timings - ncclCommInitRankConfig: rank 5 nranks 16 total 7.32 (kernels 0.24, alloc 0.89, bootstrap 5.77, allgathers 0.04, topo 0.07, graphs 0.01, connections 0.29, rest 0.02)
+2nxh200-1:89230:89230 [2] NCCL INFO Comm config Blocking set to 1
+2nxh200-1:89235:89235 [7] NCCL INFO Comm config Blocking set to 1
+2nxh200-1:89231:89231 [3] NCCL INFO Comm config Blocking set to 1
+2nxh200-1:89234:89234 [6] NCCL INFO Comm config Blocking set to 1
+2nxh200-1:89233:89233 [5] NCCL INFO Comm config Blocking set to 1
+2nxh200-1:89229:89229 [1] NCCL INFO Comm config Blocking set to 1
+2nxh200-1:89232:89232 [4] NCCL INFO Comm config Blocking set to 1
+2nxh200-1:89228:89228 [0] NCCL INFO Comm config Blocking set to 1
+2nxh200-1:89235:90171 [7] NCCL INFO Assigned NET plugin IB to comm
+2nxh200-1:89234:90177 [6] NCCL INFO Assigned NET plugin IB to comm
+2nxh200-1:89235:90171 [7] NCCL INFO Using network IB
+2nxh200-1:89234:90177 [6] NCCL INFO Using network IB
+2nxh200-1:89233:90180 [5] NCCL INFO Assigned NET plugin IB to comm
+2nxh200-1:89234:90177 [6] NCCL INFO DMA-BUF is available on GPU device 6
+2nxh200-1:89233:90180 [5] NCCL INFO Using network IB
+2nxh200-1:89235:90171 [7] NCCL INFO DMA-BUF is available on GPU device 7
+2nxh200-1:89233:90180 [5] NCCL INFO DMA-BUF is available on GPU device 5
+2nxh200-1:89232:90186 [4] NCCL INFO Assigned NET plugin IB to comm
+2nxh200-1:89232:90186 [4] NCCL INFO Using network IB
+2nxh200-1:89231:90174 [3] NCCL INFO Assigned NET plugin IB to comm
+2nxh200-1:89231:90174 [3] NCCL INFO Using network IB
+2nxh200-1:89229:90183 [1] NCCL INFO Assigned NET plugin IB to comm
+2nxh200-1:89229:90183 [1] NCCL INFO Using network IB
+2nxh200-1:89232:90186 [4] NCCL INFO DMA-BUF is available on GPU device 4
+2nxh200-1:89231:90174 [3] NCCL INFO DMA-BUF is available on GPU device 3
+2nxh200-1:89228:90189 [0] NCCL INFO Assigned NET plugin IB to comm
+2nxh200-1:89230:90168 [2] NCCL INFO Assigned NET plugin IB to comm
+2nxh200-1:89229:90183 [1] NCCL INFO DMA-BUF is available on GPU device 1
+2nxh200-1:89230:90168 [2] NCCL INFO Using network IB
+2nxh200-1:89228:90189 [0] NCCL INFO Using network IB
+2nxh200-1:89230:90168 [2] NCCL INFO DMA-BUF is available on GPU device 2
+2nxh200-1:89228:90189 [0] NCCL INFO DMA-BUF is available on GPU device 0
+2nxh200-1:89234:90177 [6] NCCL INFO ncclCommSplit comm 0x5c70130cd9c0 rank 6 nranks 16 cudaDev 6 nvmlDev 6 busId d5000 parent 0x5c7012db0cf0 splitCount 1 color 1734919490 key 6- Init START
+2nxh200-1:89235:90171 [7] NCCL INFO ncclCommSplit comm 0x5dc92e981a60 rank 7 nranks 16 cudaDev 7 nvmlDev 7 busId db000 parent 0x5dc92e664da0 splitCount 1 color 1734919490 key 7- Init START
+2nxh200-1:89232:90186 [4] NCCL INFO ncclCommSplit comm 0x65082f026110 rank 4 nranks 16 cudaDev 4 nvmlDev 4 busId cc000 parent 0x65082ed09530 splitCount 1 color 1734919490 key 4- Init START
+2nxh200-1:89231:90174 [3] NCCL INFO ncclCommSplit comm 0x5b91ab67d9f0 rank 3 nranks 16 cudaDev 3 nvmlDev 3 busId 76000 parent 0x5b91ab360d60 splitCount 1 color 1734919490 key 3- Init START
+2nxh200-1:89229:90183 [1] NCCL INFO ncclCommSplit comm 0x5c746faf0c20 rank 1 nranks 16 cudaDev 1 nvmlDev 1 busId 6c000 parent 0x5c746f7d3ff0 splitCount 1 color 1734919490 key 1- Init START
+2nxh200-1:89233:90180 [5] NCCL INFO ncclCommSplit comm 0x56bd06a02440 rank 5 nranks 16 cudaDev 5 nvmlDev 5 busId d0000 parent 0x56bd066e57f0 splitCount 1 color 1734919490 key 5- Init START
+2nxh200-1:89230:90168 [2] NCCL INFO ncclCommSplit comm 0x62347b696b10 rank 2 nranks 16 cudaDev 2 nvmlDev 2 busId 72000 parent 0x62347b379e40 splitCount 1 color 1734919490 key 2- Init START
+2nxh200-1:89228:90189 [0] NCCL INFO ncclCommSplit comm 0x57baffdff400 rank 0 nranks 16 cudaDev 0 nvmlDev 0 busId 68000 parent 0x57baff590090 splitCount 1 color 1734919490 key 0- Init START
+2nxh200-1:89235:90171 [7] NCCL INFO MNNVL busId 0xdb000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+2nxh200-1:89234:90177 [6] NCCL INFO MNNVL busId 0xd5000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+2nxh200-1:89231:90174 [3] NCCL INFO MNNVL busId 0x76000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+2nxh200-1:89233:90180 [5] NCCL INFO MNNVL busId 0xd0000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+2nxh200-1:89232:90186 [4] NCCL INFO MNNVL busId 0xcc000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+2nxh200-1:89229:90183 [1] NCCL INFO MNNVL busId 0x6c000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+2nxh200-1:89230:90168 [2] NCCL INFO MNNVL busId 0x72000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+2nxh200-1:89228:90189 [0] NCCL INFO MNNVL busId 0x68000 fabric UUID 0.0 cliqueId 0x0 state 3 healthMask 0x0
+2nxh200-1:89235:90171 [7] NCCL INFO Setting affinity for GPU 7 to 88-175
+2nxh200-1:89235:90171 [7] NCCL INFO NVLS multicast support is available on dev 7 (NVLS_NCHANNELS 16)
+2nxh200-1:89234:90177 [6] NCCL INFO Setting affinity for GPU 6 to 88-175
+2nxh200-1:89234:90177 [6] NCCL INFO NVLS multicast support is available on dev 6 (NVLS_NCHANNELS 16)
+2nxh200-1:89228:90189 [0] NCCL INFO Setting affinity for GPU 0 to 0-87
+2nxh200-1:89228:90189 [0] NCCL INFO NVLS multicast support is available on dev 0 (NVLS_NCHANNELS 16)
+2nxh200-1:89231:90174 [3] NCCL INFO Setting affinity for GPU 3 to 0-87
+2nxh200-1:89231:90174 [3] NCCL INFO NVLS multicast support is available on dev 3 (NVLS_NCHANNELS 16)
+2nxh200-1:89233:90180 [5] NCCL INFO Setting affinity for GPU 5 to 88-175
+2nxh200-1:89230:90168 [2] NCCL INFO Setting affinity for GPU 2 to 0-87
+2nxh200-1:89232:90186 [4] NCCL INFO Setting affinity for GPU 4 to 88-175
+2nxh200-1:89229:90183 [1] NCCL INFO Setting affinity for GPU 1 to 0-87
+2nxh200-1:89229:90183 [1] NCCL INFO NVLS multicast support is available on dev 1 (NVLS_NCHANNELS 16)
+2nxh200-1:89233:90180 [5] NCCL INFO NVLS multicast support is available on dev 5 (NVLS_NCHANNELS 16)
+2nxh200-1:89230:90168 [2] NCCL INFO NVLS multicast support is available on dev 2 (NVLS_NCHANNELS 16)
+2nxh200-1:89232:90186 [4] NCCL INFO NVLS multicast support is available on dev 4 (NVLS_NCHANNELS 16)
+2nxh200-1:89235:90171 [7] NCCL INFO comm 0x5dc92e981a60 rank 7 nRanks 16 nNodes 2 localRanks 8 localRank 7 MNNVL 0
+2nxh200-1:89233:90180 [5] NCCL INFO comm 0x56bd06a02440 rank 5 nRanks 16 nNodes 2 localRanks 8 localRank 5 MNNVL 0
+2nxh200-1:89234:90177 [6] NCCL INFO comm 0x5c70130cd9c0 rank 6 nRanks 16 nNodes 2 localRanks 8 localRank 6 MNNVL 0
+2nxh200-1:89231:90174 [3] NCCL INFO comm 0x5b91ab67d9f0 rank 3 nRanks 16 nNodes 2 localRanks 8 localRank 3 MNNVL 0
+2nxh200-1:89232:90186 [4] NCCL INFO comm 0x65082f026110 rank 4 nRanks 16 nNodes 2 localRanks 8 localRank 4 MNNVL 0
+2nxh200-1:89230:90168 [2] NCCL INFO comm 0x62347b696b10 rank 2 nRanks 16 nNodes 2 localRanks 8 localRank 2 MNNVL 0
+2nxh200-1:89233:90180 [5] NCCL INFO NVLS Head  0:  0  8
+2nxh200-1:89231:90174 [3] NCCL INFO NVLS Head  0:  0  8
+2nxh200-1:89234:90177 [6] NCCL INFO NVLS Head  0:  0  8
+2nxh200-1:89232:90186 [4] NCCL INFO NVLS Head  0:  0  8
+2nxh200-1:89229:90183 [1] NCCL INFO comm 0x5c746faf0c20 rank 1 nRanks 16 nNodes 2 localRanks 8 localRank 1 MNNVL 0
+2nxh200-1:89235:90171 [7] NCCL INFO NVLS Head  0:  0  8
+2nxh200-1:89231:90174 [3] NCCL INFO Trees [0] 4/-1/-1->3->2 [1] 2/11/-1->3->-1 [2] 4/-1/-1->3->2 [3] 4/-1/-1->3->2 [4] 4/-1/-1->3->2 [5] 2/-1/-1->3->11 [6] 4/-1/-1->3->2 [7] 4/-1/-1->3->2 [8] 4/-1/-1->3->2 [9] 2/11/-1->3->-1 [10] 4/-1/-1->3->2 [11] 4/-1/-1->3->2 [12] 4/-1/-1->3->2 [13] 2/-1/-1->3->11 [14] 4/-1/-1->3->2 [15] 4/-1/-1->3->2
+2nxh200-1:89233:90180 [5] NCCL INFO Trees [0] 6/-1/-1->5->4 [1] 4/-1/-1->5->6 [2] 6/13/-1->5->-1 [3] -1/-1/-1->5->4 [4] 6/-1/-1->5->4 [5] 4/-1/-1->5->6 [6] 6/-1/-1->5->13 [7] -1/-1/-1->5->4 [8] 6/-1/-1->5->4 [9] 4/-1/-1->5->6 [10] 6/13/-1->5->-1 [11] -1/-1/-1->5->4 [12] 6/-1/-1->5->4 [13] 4/-1/-1->5->6 [14] 6/-1/-1->5->13 [15] -1/-1/-1->5->4
+2nxh200-1:89231:90174 [3] NCCL INFO P2P Chunksize set to 131072
+2nxh200-1:89230:90168 [2] NCCL INFO NVLS Head  0:  0  8
+2nxh200-1:89233:90180 [5] NCCL INFO P2P Chunksize set to 131072
+2nxh200-1:89234:90177 [6] NCCL INFO Trees [0] 7/-1/-1->6->5 [1] 5/-1/-1->6->7 [2] 7/-1/-1->6->5 [3] 7/14/-1->6->-1 [4] 7/-1/-1->6->5 [5] 5/-1/-1->6->7 [6] 7/-1/-1->6->5 [7] 7/-1/-1->6->14 [8] 7/-1/-1->6->5 [9] 5/-1/-1->6->7 [10] 7/-1/-1->6->5 [11] 7/14/-1->6->-1 [12] 7/-1/-1->6->5 [13] 5/-1/-1->6->7 [14] 7/-1/-1->6->5 [15] 7/-1/-1->6->14
+2nxh200-1:89234:90177 [6] NCCL INFO P2P Chunksize set to 131072
+2nxh200-1:89232:90186 [4] NCCL INFO Trees [0] 5/-1/-1->4->3 [1] -1/-1/-1->4->5 [2] -1/-1/-1->4->3 [3] 5/-1/-1->4->3 [4] 5/-1/-1->4->3 [5] -1/-1/-1->4->5 [6] -1/-1/-1->4->3 [7] 5/-1/-1->4->3 [8] 5/-1/-1->4->3 [9] -1/-1/-1->4->5 [10] -1/-1/-1->4->3 [11] 5/-1/-1->4->3 [12] 5/-1/-1->4->3 [13] -1/-1/-1->4->5 [14] -1/-1/-1->4->3 [15] 5/-1/-1->4->3
+2nxh200-1:89232:90186 [4] NCCL INFO P2P Chunksize set to 131072
+2nxh200-1:89235:90171 [7] NCCL INFO Trees [0] -1/-1/-1->7->6 [1] 6/-1/-1->7->0 [2] 0/-1/-1->7->6 [3] 0/-1/-1->7->6 [4] -1/-1/-1->7->6 [5] 6/-1/-1->7->0 [6] 0/-1/-1->7->6 [7] 0/-1/-1->7->6 [8] -1/-1/-1->7->6 [9] 6/-1/-1->7->0 [10] 0/-1/-1->7->6 [11] 0/-1/-1->7->6 [12] -1/-1/-1->7->6 [13] 6/-1/-1->7->0 [14] 0/-1/-1->7->6 [15] 0/-1/-1->7->6
+2nxh200-1:89235:90171 [7] NCCL INFO P2P Chunksize set to 131072
+2nxh200-1:89230:90168 [2] NCCL INFO Trees [0] 3/-1/-1->2->1 [1] 1/-1/-1->2->3 [2] 3/-1/-1->2->1 [3] 3/-1/-1->2->1 [4] 3/-1/-1->2->1 [5] 1/-1/-1->2->3 [6] 3/-1/-1->2->1 [7] 3/-1/-1->2->1 [8] 3/-1/-1->2->1 [9] 1/-1/-1->2->3 [10] 3/-1/-1->2->1 [11] 3/-1/-1->2->1 [12] 3/-1/-1->2->1 [13] 1/-1/-1->2->3 [14] 3/-1/-1->2->1 [15] 3/-1/-1->2->1
+2nxh200-1:89230:90168 [2] NCCL INFO P2P Chunksize set to 131072
+2nxh200-1:89229:90183 [1] NCCL INFO NVLS Head  0:  0  8
+2nxh200-1:89228:90189 [0] NCCL INFO comm 0x57baffdff400 rank 0 nRanks 16 nNodes 2 localRanks 8 localRank 0 MNNVL 0
+2nxh200-1:89229:90183 [1] NCCL INFO Trees [0] 2/-1/-1->1->0 [1] 0/-1/-1->1->2 [2] 2/-1/-1->1->0 [3] 2/-1/-1->1->0 [4] 2/-1/-1->1->0 [5] 0/-1/-1->1->2 [6] 2/-1/-1->1->0 [7] 2/-1/-1->1->0 [8] 2/-1/-1->1->0 [9] 0/-1/-1->1->2 [10] 2/-1/-1->1->0 [11] 2/-1/-1->1->0 [12] 2/-1/-1->1->0 [13] 0/-1/-1->1->2 [14] 2/-1/-1->1->0 [15] 2/-1/-1->1->0
+2nxh200-1:89229:90183 [1] NCCL INFO P2P Chunksize set to 131072
+2nxh200-1:89228:90189 [0] NCCL INFO NVLS Head  0:  0  8
+2nxh200-1:89228:90189 [0] NCCL INFO Channel 00/16 :  0  9 10 11 12 13 14 15  8  1  2  3  4  5  6  7
+2nxh200-1:89228:90189 [0] NCCL INFO Channel 01/16 :  0  7  6  5  4  3  2  1  8 15 14 13 12 11 10  9
+2nxh200-1:89228:90189 [0] NCCL INFO Channel 02/16 :  0  7  6 13 12 11 10  9  8 15 14  5  4  3  2  1
+2nxh200-1:89228:90189 [0] NCCL INFO Channel 03/16 :  0  1  2  3  4  5 14 15  8  9 10 11 12 13  6  7
+2nxh200-1:89228:90189 [0] NCCL INFO Channel 04/16 :  0  9 10 11 12 13 14 15  8  1  2  3  4  5  6  7
+2nxh200-1:89228:90189 [0] NCCL INFO Channel 05/16 :  0  7  6  5  4  3  2  1  8 15 14 13 12 11 10  9
+2nxh200-1:89228:90189 [0] NCCL INFO Channel 06/16 :  0  7  6 13 12 11 10  9  8 15 14  5  4  3  2  1
+2nxh200-1:89228:90189 [0] NCCL INFO Channel 07/16 :  0  1  2  3  4  5 14 15  8  9 10 11 12 13  6  7
+2nxh200-1:89228:90189 [0] NCCL INFO Channel 08/16 :  0  9 10 11 12 13 14 15  8  1  2  3  4  5  6  7
+2nxh200-1:89228:90189 [0] NCCL INFO Channel 09/16 :  0  7  6  5  4  3  2  1  8 15 14 13 12 11 10  9
+2nxh200-1:89228:90189 [0] NCCL INFO Channel 10/16 :  0  7  6 13 12 11 10  9  8 15 14  5  4  3  2  1
+2nxh200-1:89228:90189 [0] NCCL INFO Channel 11/16 :  0  1  2  3  4  5 14 15  8  9 10 11 12 13  6  7
+2nxh200-1:89228:90189 [0] NCCL INFO Channel 12/16 :  0  9 10 11 12 13 14 15  8  1  2  3  4  5  6  7
+2nxh200-1:89228:90189 [0] NCCL INFO Channel 13/16 :  0  7  6  5  4  3  2  1  8 15 14 13 12 11 10  9
+2nxh200-1:89228:90189 [0] NCCL INFO Channel 14/16 :  0  7  6 13 12 11 10  9  8 15 14  5  4  3  2  1
+2nxh200-1:89228:90189 [0] NCCL INFO Channel 15/16 :  0  1  2  3  4  5 14 15  8  9 10 11 12 13  6  7
+2nxh200-1:89228:90189 [0] NCCL INFO Trees [0] 1/8/-1->0->-1 [1] 7/-1/-1->0->1 [2] 1/-1/-1->0->7 [3] 1/-1/-1->0->7 [4] 1/-1/-1->0->8 [5] 7/-1/-1->0->1 [6] 1/-1/-1->0->7 [7] 1/-1/-1->0->7 [8] 1/8/-1->0->-1 [9] 7/-1/-1->0->1 [10] 1/-1/-1->0->7 [11] 1/-1/-1->0->7 [12] 1/-1/-1->0->8 [13] 7/-1/-1->0->1 [14] 1/-1/-1->0->7 [15] 1/-1/-1->0->7
+2nxh200-1:89228:90189 [0] NCCL INFO P2P Chunksize set to 131072
+2nxh200-1:89228:90189 [0] NCCL INFO Check P2P Type isAllDirectP2p 1 directMode 0
+2nxh200-1:89230:90191 [2] NCCL INFO [Proxy Service] Device 2 CPU core 35
+2nxh200-1:89229:90193 [1] NCCL INFO [Proxy Service] Device 1 CPU core 29
+2nxh200-1:89232:90192 [4] NCCL INFO [Proxy Service] Device 4 CPU core 109
+2nxh200-1:89229:90198 [1] NCCL INFO [Proxy Service UDS] Device 1 CPU core 31
+2nxh200-1:89231:90190 [3] NCCL INFO [Proxy Service] Device 3 CPU core 50
+2nxh200-1:89228:90201 [0] NCCL INFO [Proxy Service] Device 0 CPU core 1
+2nxh200-1:89235:90197 [7] NCCL INFO [Proxy Service] Device 7 CPU core 90
+2nxh200-1:89234:90196 [6] NCCL INFO [Proxy Service] Device 6 CPU core 111
+2nxh200-1:89231:90195 [3] NCCL INFO [Proxy Service UDS] Device 3 CPU core 51
+2nxh200-1:89232:90199 [4] NCCL INFO [Proxy Service UDS] Device 4 CPU core 112
+2nxh200-1:89230:90200 [2] NCCL INFO [Proxy Service UDS] Device 2 CPU core 42
+2nxh200-1:89235:90204 [7] NCCL INFO [Proxy Service UDS] Device 7 CPU core 92
+2nxh200-1:89233:90202 [5] NCCL INFO [Proxy Service UDS] Device 5 CPU core 91
+2nxh200-1:89233:90194 [5] NCCL INFO [Proxy Service] Device 5 CPU core 117
+2nxh200-1:89234:90203 [6] NCCL INFO [Proxy Service UDS] Device 6 CPU core 113
+2nxh200-1:89228:90205 [0] NCCL INFO [Proxy Service UDS] Device 0 CPU core 10
+2nxh200-1:89231:90174 [3] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+2nxh200-1:89231:90174 [3] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+2nxh200-1:89229:90183 [1] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+2nxh200-1:89230:90168 [2] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+2nxh200-1:89229:90183 [1] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+2nxh200-1:89230:90168 [2] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+2nxh200-1:89233:90180 [5] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+2nxh200-1:89233:90180 [5] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+2nxh200-1:89228:90189 [0] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+2nxh200-1:89228:90189 [0] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+2nxh200-1:89235:90171 [7] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+2nxh200-1:89235:90171 [7] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+2nxh200-1:89232:90186 [4] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+2nxh200-1:89232:90186 [4] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+2nxh200-1:89234:90177 [6] NCCL INFO threadThresholds 8/8/64 | 128/8/64 | 512 | 512
+2nxh200-1:89234:90177 [6] NCCL INFO 16 coll channels, 16 collnet channels, 16 nvls channels, 16 p2p channels, 2 p2p channels per peer
+2nxh200-1:89228:90189 [0] NCCL INFO CC Off, workFifoBytes 1048576
+2nxh200-1:89230:90168 [2] NCCL INFO ncclCommSplit comm 0x62347b696b10 rank 2 nranks 16 cudaDev 2 nvmlDev 2 busId 72000 parent 0x62347b379e40 splitCount 1 color 1734919490 key 2 - Init COMPLETE
+2nxh200-1:89229:90183 [1] NCCL INFO ncclCommSplit comm 0x5c746faf0c20 rank 1 nranks 16 cudaDev 1 nvmlDev 1 busId 6c000 parent 0x5c746f7d3ff0 splitCount 1 color 1734919490 key 1 - Init COMPLETE
+2nxh200-1:89228:90189 [0] NCCL INFO ncclCommSplit comm 0x57baffdff400 rank 0 nranks 16 cudaDev 0 nvmlDev 0 busId 68000 parent 0x57baff590090 splitCount 1 color 1734919490 key 0 - Init COMPLETE
+2nxh200-1:89232:90186 [4] NCCL INFO ncclCommSplit comm 0x65082f026110 rank 4 nranks 16 cudaDev 4 nvmlDev 4 busId cc000 parent 0x65082ed09530 splitCount 1 color 1734919490 key 4 - Init COMPLETE
+2nxh200-1:89229:90183 [1] NCCL INFO Init timings - ncclCommSplit: rank 1 nranks 16 total 0.78 (kernels 0.00, alloc 0.00, bootstrap 0.02, allgathers 0.01, topo 0.09, graphs 0.01, connections 0.51, rest 0.14)
+2nxh200-1:89233:90180 [5] NCCL INFO ncclCommSplit comm 0x56bd06a02440 rank 5 nranks 16 cudaDev 5 nvmlDev 5 busId d0000 parent 0x56bd066e57f0 splitCount 1 color 1734919490 key 5 - Init COMPLETE
+2nxh200-1:89235:90171 [7] NCCL INFO ncclCommSplit comm 0x5dc92e981a60 rank 7 nranks 16 cudaDev 7 nvmlDev 7 busId db000 parent 0x5dc92e664da0 splitCount 1 color 1734919490 key 7 - Init COMPLETE
+2nxh200-1:89230:90168 [2] NCCL INFO Init timings - ncclCommSplit: rank 2 nranks 16 total 0.80 (kernels 0.00, alloc 0.00, bootstrap 0.02, allgathers 0.01, topo 0.08, graphs 0.01, connections 0.58, rest 0.10)
+2nxh200-1:89228:90189 [0] NCCL INFO Init timings - ncclCommSplit: rank 0 nranks 16 total 0.77 (kernels 0.00, alloc 0.00, bootstrap 0.02, allgathers 0.01, topo 0.08, graphs 0.01, connections 0.58, rest 0.06)
+2nxh200-1:89231:90174 [3] NCCL INFO ncclCommSplit comm 0x5b91ab67d9f0 rank 3 nranks 16 cudaDev 3 nvmlDev 3 busId 76000 parent 0x5b91ab360d60 splitCount 1 color 1734919490 key 3 - Init COMPLETE
+2nxh200-1:89232:90186 [4] NCCL INFO Init timings - ncclCommSplit: rank 4 nranks 16 total 0.78 (kernels 0.00, alloc 0.00, bootstrap 0.02, allgathers 0.01, topo 0.08, graphs 0.01, connections 0.58, rest 0.07)
+2nxh200-1:89235:90171 [7] NCCL INFO Init timings - ncclCommSplit: rank 7 nranks 16 total 0.79 (kernels 0.00, alloc 0.00, bootstrap 0.02, allgathers 0.01, topo 0.08, graphs 0.01, connections 0.51, rest 0.16)
+2nxh200-1:89233:90180 [5] NCCL INFO Init timings - ncclCommSplit: rank 5 nranks 16 total 0.79 (kernels 0.00, alloc 0.00, bootstrap 0.02, allgathers 0.01, topo 0.08, graphs 0.01, connections 0.58, rest 0.08)
+2nxh200-1:89234:90177 [6] NCCL INFO ncclCommSplit comm 0x5c70130cd9c0 rank 6 nranks 16 cudaDev 6 nvmlDev 6 busId d5000 parent 0x5c7012db0cf0 splitCount 1 color 1734919490 key 6 - Init COMPLETE
+2nxh200-1:89231:90174 [3] NCCL INFO Init timings - ncclCommSplit: rank 3 nranks 16 total 0.79 (kernels 0.00, alloc 0.00, bootstrap 0.02, allgathers 0.01, topo 0.08, graphs 0.01, connections 0.51, rest 0.15)
+2nxh200-1:89234:90177 [6] NCCL INFO Init timings - ncclCommSplit: rank 6 nranks 16 total 0.79 (kernels 0.00, alloc 0.00, bootstrap 0.02, allgathers 0.01, topo 0.08, graphs 0.01, connections 0.52, rest 0.15)
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 03/0 : 0[0] -> 1[1] via P2P/CUMEM
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 07/0 : 0[0] -> 1[1] via P2P/CUMEM
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 11/0 : 0[0] -> 1[1] via P2P/CUMEM
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 15/0 : 0[0] -> 1[1] via P2P/CUMEM
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 00/0 : 5[5] -> 6[6] via P2P/CUMEM
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 00/0 : 6[6] -> 7[7] via P2P/CUMEM
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 00/0 : 1[1] -> 2[2] via P2P/CUMEM
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 03/0 : 1[1] -> 2[2] via P2P/CUMEM
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 04/0 : 5[5] -> 6[6] via P2P/CUMEM
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 03/0 : 6[6] -> 7[7] via P2P/CUMEM
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 04/0 : 1[1] -> 2[2] via P2P/CUMEM
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 04/0 : 6[6] -> 7[7] via P2P/CUMEM
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 08/0 : 5[5] -> 6[6] via P2P/CUMEM
+2nxh200-1:89231:90209 [3] NCCL INFO Channel 00/0 : 3[3] -> 4[4] via P2P/CUMEM
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 07/0 : 6[6] -> 7[7] via P2P/CUMEM
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 08/0 : 6[6] -> 7[7] via P2P/CUMEM
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 07/0 : 1[1] -> 2[2] via P2P/CUMEM
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 12/0 : 5[5] -> 6[6] via P2P/CUMEM
+2nxh200-1:89230:90212 [2] NCCL INFO Channel 00/0 : 2[2] -> 3[3] via P2P/CUMEM
+2nxh200-1:89231:90209 [3] NCCL INFO Channel 03/0 : 3[3] -> 4[4] via P2P/CUMEM
+2nxh200-1:89231:90209 [3] NCCL INFO Channel 04/0 : 3[3] -> 4[4] via P2P/CUMEM
+2nxh200-1:89230:90212 [2] NCCL INFO Channel 03/0 : 2[2] -> 3[3] via P2P/CUMEM
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 11/0 : 6[6] -> 7[7] via P2P/CUMEM
+2nxh200-1:89232:90214 [4] NCCL INFO Channel 00/0 : 4[4] -> 5[5] via P2P/CUMEM
+2nxh200-1:89230:90212 [2] NCCL INFO Channel 04/0 : 2[2] -> 3[3] via P2P/CUMEM
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 08/0 : 1[1] -> 2[2] via P2P/CUMEM
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 12/0 : 6[6] -> 7[7] via P2P/CUMEM
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 15/0 : 6[6] -> 7[7] via P2P/CUMEM
+2nxh200-1:89230:90212 [2] NCCL INFO Channel 07/0 : 2[2] -> 3[3] via P2P/CUMEM
+2nxh200-1:89231:90209 [3] NCCL INFO Channel 07/0 : 3[3] -> 4[4] via P2P/CUMEM
+2nxh200-1:89232:90214 [4] NCCL INFO Channel 03/0 : 4[4] -> 5[5] via P2P/CUMEM
+2nxh200-1:89232:90214 [4] NCCL INFO Channel 04/0 : 4[4] -> 5[5] via P2P/CUMEM
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 11/0 : 1[1] -> 2[2] via P2P/CUMEM
+2nxh200-1:89231:90209 [3] NCCL INFO Channel 08/0 : 3[3] -> 4[4] via P2P/CUMEM
+2nxh200-1:89231:90209 [3] NCCL INFO Channel 11/0 : 3[3] -> 4[4] via P2P/CUMEM
+2nxh200-1:89230:90212 [2] NCCL INFO Channel 08/0 : 2[2] -> 3[3] via P2P/CUMEM
+2nxh200-1:89232:90214 [4] NCCL INFO Channel 07/0 : 4[4] -> 5[5] via P2P/CUMEM
+2nxh200-1:89231:90209 [3] NCCL INFO Channel 12/0 : 3[3] -> 4[4] via P2P/CUMEM
+2nxh200-1:89230:90212 [2] NCCL INFO Channel 11/0 : 2[2] -> 3[3] via P2P/CUMEM
+2nxh200-1:89232:90214 [4] NCCL INFO Channel 08/0 : 4[4] -> 5[5] via P2P/CUMEM
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 12/0 : 1[1] -> 2[2] via P2P/CUMEM
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 15/0 : 1[1] -> 2[2] via P2P/CUMEM
+2nxh200-1:89230:90212 [2] NCCL INFO Channel 12/0 : 2[2] -> 3[3] via P2P/CUMEM
+2nxh200-1:89232:90214 [4] NCCL INFO Channel 11/0 : 4[4] -> 5[5] via P2P/CUMEM
+2nxh200-1:89231:90209 [3] NCCL INFO Channel 15/0 : 3[3] -> 4[4] via P2P/CUMEM
+2nxh200-1:89230:90212 [2] NCCL INFO Channel 15/0 : 2[2] -> 3[3] via P2P/CUMEM
+2nxh200-1:89232:90214 [4] NCCL INFO Channel 12/0 : 4[4] -> 5[5] via P2P/CUMEM
+2nxh200-1:89232:90214 [4] NCCL INFO Channel 15/0 : 4[4] -> 5[5] via P2P/CUMEM
+2nxh200-1:89230:90212 [2] NCCL INFO Channel 01/0 : 2[2] -> 1[1] via P2P/CUMEM
+2nxh200-1:89230:90212 [2] NCCL INFO Channel 02/0 : 2[2] -> 1[1] via P2P/CUMEM
+2nxh200-1:89230:90212 [2] NCCL INFO Channel 05/0 : 2[2] -> 1[1] via P2P/CUMEM
+2nxh200-1:89231:90209 [3] NCCL INFO Channel 01/0 : 3[3] -> 2[2] via P2P/CUMEM
+2nxh200-1:89232:90214 [4] NCCL INFO Channel 01/0 : 4[4] -> 3[3] via P2P/CUMEM
+2nxh200-1:89230:90212 [2] NCCL INFO Channel 06/0 : 2[2] -> 1[1] via P2P/CUMEM
+2nxh200-1:89231:90209 [3] NCCL INFO Channel 02/0 : 3[3] -> 2[2] via P2P/CUMEM
+2nxh200-1:89232:90214 [4] NCCL INFO Channel 02/0 : 4[4] -> 3[3] via P2P/CUMEM
+2nxh200-1:89230:90212 [2] NCCL INFO Channel 09/0 : 2[2] -> 1[1] via P2P/CUMEM
+2nxh200-1:89231:90209 [3] NCCL INFO Channel 05/0 : 3[3] -> 2[2] via P2P/CUMEM
+2nxh200-1:89232:90214 [4] NCCL INFO Channel 05/0 : 4[4] -> 3[3] via P2P/CUMEM
+2nxh200-1:89231:90209 [3] NCCL INFO Channel 06/0 : 3[3] -> 2[2] via P2P/CUMEM
+2nxh200-1:89230:90212 [2] NCCL INFO Channel 10/0 : 2[2] -> 1[1] via P2P/CUMEM
+2nxh200-1:89232:90214 [4] NCCL INFO Channel 06/0 : 4[4] -> 3[3] via P2P/CUMEM
+2nxh200-1:89231:90209 [3] NCCL INFO Channel 09/0 : 3[3] -> 2[2] via P2P/CUMEM
+2nxh200-1:89230:90212 [2] NCCL INFO Channel 13/0 : 2[2] -> 1[1] via P2P/CUMEM
+2nxh200-1:89232:90214 [4] NCCL INFO Channel 09/0 : 4[4] -> 3[3] via P2P/CUMEM
+2nxh200-1:89231:90209 [3] NCCL INFO Channel 10/0 : 3[3] -> 2[2] via P2P/CUMEM
+2nxh200-1:89230:90212 [2] NCCL INFO Channel 14/0 : 2[2] -> 1[1] via P2P/CUMEM
+2nxh200-1:89232:90214 [4] NCCL INFO Channel 10/0 : 4[4] -> 3[3] via P2P/CUMEM
+2nxh200-1:89231:90209 [3] NCCL INFO Channel 13/0 : 3[3] -> 2[2] via P2P/CUMEM
+2nxh200-1:89232:90214 [4] NCCL INFO Channel 13/0 : 4[4] -> 3[3] via P2P/CUMEM
+2nxh200-1:89231:90209 [3] NCCL INFO Channel 14/0 : 3[3] -> 2[2] via P2P/CUMEM
+2nxh200-1:89232:90214 [4] NCCL INFO Channel 14/0 : 4[4] -> 3[3] via P2P/CUMEM
+2nxh200-1:89234:90216 [6] NCCL INFO [Proxy Progress] Device 6 CPU core 113
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 02/0 : 6[6] -> 13[5] [send] via NET/IB/0
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 06/0 : 6[6] -> 13[5] [send] via NET/IB/0
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 10/0 : 6[6] -> 13[5] [send] via NET/IB/0
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 14/0 : 6[6] -> 13[5] [send] via NET/IB/0
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 03/0 : 13[5] -> 6[6] [receive] via NET/IB/3
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 07/0 : 13[5] -> 6[6] [receive] via NET/IB/3
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 11/0 : 13[5] -> 6[6] [receive] via NET/IB/3
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 15/0 : 13[5] -> 6[6] [receive] via NET/IB/3
+2nxh200-1:89228:90217 [0] NCCL INFO [Proxy Progress] Device 0 CPU core 13
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 01/0 : 9[1] -> 0[0] [receive] via NET/IB/6
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 05/0 : 9[1] -> 0[0] [receive] via NET/IB/6
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 09/0 : 9[1] -> 0[0] [receive] via NET/IB/6
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 13/0 : 9[1] -> 0[0] [receive] via NET/IB/6
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 01/0 : 0[0] -> 7[7] via P2P/CUMEM
+2nxh200-1:89229:90218 [1] NCCL INFO [Proxy Progress] Device 1 CPU core 31
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 01/0 : 1[1] -> 8[0] [send] via NET/IB/6
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 05/0 : 1[1] -> 8[0] [send] via NET/IB/6
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 09/0 : 1[1] -> 8[0] [send] via NET/IB/6
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 13/0 : 1[1] -> 8[0] [send] via NET/IB/6
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 00/0 : 8[0] -> 1[1] [receive] via NET/IB/5
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 04/0 : 8[0] -> 1[1] [receive] via NET/IB/5
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 08/0 : 8[0] -> 1[1] [receive] via NET/IB/5
+2nxh200-1:89233:90219 [5] NCCL INFO [Proxy Progress] Device 5 CPU core 91
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 02/0 : 14[6] -> 5[5] [receive] via NET/IB/0
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 12/0 : 8[0] -> 1[1] [receive] via NET/IB/5
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 06/0 : 14[6] -> 5[5] [receive] via NET/IB/0
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 02/0 : 0[0] -> 7[7] via P2P/CUMEM
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 10/0 : 14[6] -> 5[5] [receive] via NET/IB/0
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 14/0 : 14[6] -> 5[5] [receive] via NET/IB/0
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 05/0 : 0[0] -> 7[7] via P2P/CUMEM
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 03/0 : 5[5] -> 14[6] [send] via NET/IB/3
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 07/0 : 5[5] -> 14[6] [send] via NET/IB/3
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 11/0 : 5[5] -> 14[6] [send] via NET/IB/3
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 15/0 : 5[5] -> 14[6] [send] via NET/IB/3
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 06/0 : 0[0] -> 7[7] via P2P/CUMEM
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 09/0 : 0[0] -> 7[7] via P2P/CUMEM
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 10/0 : 0[0] -> 7[7] via P2P/CUMEM
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 13/0 : 0[0] -> 7[7] via P2P/CUMEM
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 01/0 : 6[6] -> 5[5] via P2P/CUMEM
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 14/0 : 0[0] -> 7[7] via P2P/CUMEM
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 05/0 : 6[6] -> 5[5] via P2P/CUMEM
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 01/0 : 5[5] -> 4[4] via P2P/CUMEM
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 09/0 : 6[6] -> 5[5] via P2P/CUMEM
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 02/0 : 5[5] -> 4[4] via P2P/CUMEM
+2nxh200-1:89235:90213 [7] NCCL INFO Channel 00/0 : 7[7] -> 0[0] via P2P/CUMEM
+2nxh200-1:89234:90215 [6] NCCL INFO Channel 13/0 : 6[6] -> 5[5] via P2P/CUMEM
+2nxh200-1:89235:90213 [7] NCCL INFO Channel 03/0 : 7[7] -> 0[0] via P2P/CUMEM
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 05/0 : 5[5] -> 4[4] via P2P/CUMEM
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 06/0 : 5[5] -> 4[4] via P2P/CUMEM
+2nxh200-1:89235:90213 [7] NCCL INFO Channel 04/0 : 7[7] -> 0[0] via P2P/CUMEM
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 09/0 : 5[5] -> 4[4] via P2P/CUMEM
+2nxh200-1:89235:90213 [7] NCCL INFO Channel 07/0 : 7[7] -> 0[0] via P2P/CUMEM
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 10/0 : 5[5] -> 4[4] via P2P/CUMEM
+2nxh200-1:89235:90213 [7] NCCL INFO Channel 08/0 : 7[7] -> 0[0] via P2P/CUMEM
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 13/0 : 5[5] -> 4[4] via P2P/CUMEM
+2nxh200-1:89233:90208 [5] NCCL INFO Channel 14/0 : 5[5] -> 4[4] via P2P/CUMEM
+2nxh200-1:89235:90213 [7] NCCL INFO Channel 11/0 : 7[7] -> 0[0] via P2P/CUMEM
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 00/0 : 0[0] -> 9[1] [send] via NET/IB/5
+2nxh200-1:89235:90213 [7] NCCL INFO Channel 12/0 : 7[7] -> 0[0] via P2P/CUMEM
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 04/0 : 0[0] -> 9[1] [send] via NET/IB/5
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 08/0 : 0[0] -> 9[1] [send] via NET/IB/5
+2nxh200-1:89228:90210 [0] NCCL INFO Channel 12/0 : 0[0] -> 9[1] [send] via NET/IB/5
+2nxh200-1:89235:90213 [7] NCCL INFO Channel 15/0 : 7[7] -> 0[0] via P2P/CUMEM
+2nxh200-1:89235:90213 [7] NCCL INFO Channel 01/0 : 7[7] -> 6[6] via P2P/CUMEM
+2nxh200-1:89235:90213 [7] NCCL INFO Channel 02/0 : 7[7] -> 6[6] via P2P/CUMEM
+2nxh200-1:89235:90213 [7] NCCL INFO Channel 05/0 : 7[7] -> 6[6] via P2P/CUMEM
+2nxh200-1:89235:90213 [7] NCCL INFO Channel 06/0 : 7[7] -> 6[6] via P2P/CUMEM
+2nxh200-1:89235:90213 [7] NCCL INFO Channel 09/0 : 7[7] -> 6[6] via P2P/CUMEM
+2nxh200-1:89235:90213 [7] NCCL INFO Channel 10/0 : 7[7] -> 6[6] via P2P/CUMEM
+2nxh200-1:89235:90213 [7] NCCL INFO Channel 13/0 : 7[7] -> 6[6] via P2P/CUMEM
+2nxh200-1:89235:90213 [7] NCCL INFO Channel 14/0 : 7[7] -> 6[6] via P2P/CUMEM
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 02/0 : 1[1] -> 0[0] via P2P/CUMEM
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 06/0 : 1[1] -> 0[0] via P2P/CUMEM
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 10/0 : 1[1] -> 0[0] via P2P/CUMEM
+2nxh200-1:89229:90211 [1] NCCL INFO Channel 14/0 : 1[1] -> 0[0] via P2P/CUMEM
+2nxh200-1:89234:90215 [6] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+2nxh200-1:89233:90208 [5] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+2nxh200-1:89232:90214 [4] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+2nxh200-1:89235:90213 [7] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+2nxh200-1:89231:90209 [3] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+2nxh200-1:89230:90212 [2] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+2nxh200-1:89229:90211 [1] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+2nxh200-1:89228:90210 [0] NCCL INFO Connected all rings, use ring PXN 0 GDR 0
+
+[2026-01-10 13:12:13] 2nxh200-1:89229:90218 [1] transport/net_ib.cc:2453 NCCL WARN NET/IB: Got completion from peer 10.13.114.102<42958> with status=12 opcode=0 len=0 vendor err 129 (Recv) hca mlx5_6
+2nxh200-1:89229:90218 [1] NCCL INFO transport/net.cc:1393 -> 6
+2nxh200-1:89235:90197 [7] NCCL INFO [Service thread] Connection closed by localRank 0

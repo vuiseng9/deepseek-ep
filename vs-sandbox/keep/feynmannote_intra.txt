@@ -1,0 +1,65 @@
+
+
+
+--allow-mnnvl for multi-node nvl, for those GB200, GH200
+
+--use-fabric
+No, this is NOT at the InfiniBand level. It's purely a CUDA GPU memory API choice:
+
+Without --use-fabric (default):
+    cudaMalloc(ptr, size);  // Traditional CUDA memory allocation
+    cudaIpcGetMemHandle();  // Traditional IPC for GPU-to-GPU sharing
+
+With --use-fabric:
+    cuMemCreate();          // Modern CUDA memory management
+    cuMemMap();             // Virtual memory mapping
+    CU_MEM_HANDLE_TYPE_FABRIC;  // Fabric handle for sharing
+
+What "Fabric" means here:
+    CUDA Fabric = NVIDIA's modern memory virtualization/sharing API
+    Introduced with newer CUDA versions for more flexible memory management
+    Better suited for complex multi-GPU/multi-node memory sharing patterns
+    Has nothing to do with network fabric or InfiniBand - it's purely GPU memory-level
+
+no use fabric
+[tuning] Best dispatch (FP8): SMs 24, NVL chunk 24, 239.15 GB/s (NVL), t: 252.28 us
+[tuning] Best dispatch (BF16): SMs 24, NVL chunk 12, 330.60 GB/s (NVL), t: 353.94 us
+[tuning] Best combine: SMs 24, NVL chunk 7: 280.00 GB/s (NVL), t: 417.90 us
+
+D = 7168
+E = 256
+K = 8
+T = 4096
+
+
+topk_idx
+rank_idx of where those selected experts live
+
+Correct. Lines 17-193 focus on functional correctness validation:
+
+
+    buffer = deep_ep.Buffer(group,
+                            int(2e9) = num_nvl_bytes,
+                            0 = num_rdma_bytes,
+                            False = low_latency_mode=test_ll_compatibility,
+                            1 = num_qps_per_rank=(ll_num_experts // num_ranks if test_ll_compatibility else 1)=1,
+                            explicitly_destroy=True,
+                            False = allow_mnnvl=args.allow_mnnvl,
+                            False = use_fabric=args.use_fabric)
+
+    test_main(args, 24=num_sms, local_rank, num_ranks, rank, buffer, group)
+
+    x [T, D] bf16
+    x_pure_rand [T, D]
+    x_e4m3 fp8 per block of 128
+    scores [T, E] (more like logits)
+    topk_idx [T, K] (selected expert ids) int64
+    topk_weights[T, k] (why all one? does it matter? prob no)
+    topk_weights_pure_rand[T, k] (rand weight)
+    rank_idx (group n_expert//n_rank)
+
+    x = rand_idx
+
+    inplace_unique(rank_idx, num_ranks) uniquify token by rank, meaning 
+    if a token going to any expert of the same rank, we want to send once only
+    save bandwidth
