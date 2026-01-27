@@ -37,3 +37,7 @@ for deepep
     --moe-flex-dispatcher-backend deepep
 
 [--moe-token-dispatcher-type {allgather,alltoall,flex}]
+
+
+Docker build
+docker build --no-cache -t mlm-dsep-hopper .
