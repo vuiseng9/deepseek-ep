@@ -49,8 +49,8 @@ Correct. Lines 17-193 focus on functional correctness validation:
 
     test_main(args, 24=num_sms, local_rank, num_ranks, rank, buffer, group)
 
-    x [T, D] bf16
-    x_pure_rand [T, D]
+    x [T, D] bf16 
+    x_pure_rand [T, D] bf16
     x_e4m3 fp8 per block of 128
     scores [T, E] (more like logits)
     topk_idx [T, K] (selected expert ids) int64
@@ -58,8 +58,20 @@ Correct. Lines 17-193 focus on functional correctness validation:
     topk_weights_pure_rand[T, k] (rand weight)
     rank_idx (group n_expert//n_rank)
 
-    x = rand_idx
 
     inplace_unique(rank_idx, num_ranks) uniquify token by rank, meaning 
-    if a token going to any expert of the same rank, we want to send once only
-    save bandwidth
+        x = rand_idx
+    
+        rand_idx [T, K] is the rank if of those selected experts
+        at high-level, this functions just want to uniquefy the dest rank
+        meaning for every row, keep the first occurence of rank id, the rest -1
+        intent to indicate which rank to dispatch to.
+        
+            if a token going to any expert of the same rank, we want to send once only
+            save bandwidth
+
+        !!! need to understand routine
+
+    all reduce tokens count per eid. each rank has 4K tokens to begin with.
+
+    

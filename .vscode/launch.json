@@ -12,7 +12,7 @@
             "justMyCode": false,
             // "subProcess": false,
             "env": {},
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/deepseek-ep",
             "program": "tests/test_intranode.py",
             "args": [
                 "--num-processes", "2",

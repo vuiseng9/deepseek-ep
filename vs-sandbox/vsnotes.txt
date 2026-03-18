@@ -41,7 +41,7 @@ third-party/README.md
 
       # build for Hopper 9.0 ootb
       NVSHMEM_DIR=$(get-site-packages-path)/nvidia/nvshmem python setup.py install
-
+      # set TORCH_CUDA_ARCH_LIST=10.0 for blackwell, doesnt work for ampere
 
 
     ### (2) Installation via OS agnostic portable tarball

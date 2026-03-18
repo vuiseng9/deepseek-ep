@@ -45,18 +45,31 @@ def test_main(args: argparse.Namespace, num_sms: int, local_rank: int, num_ranks
     dist.all_reduce(gbl_num_tokens_per_expert, group=group)
 
     # Rank layout meta
+    # Allocate tensor to store the count of tokens assigned to each rank
     num_tokens_per_rank = torch.empty((num_ranks, ), dtype=torch.int, device='cuda')
+    # Initialize token index mapping: [rank, token] -> position in rank (-1 means not assigned)
     token_idx_in_rank = torch.full((num_ranks, num_tokens), -1, dtype=torch.long, device='cuda')
+    # Process each rank to build the token layout mapping
     for i in range(num_ranks):
+        # Count how many tokens are assigned to rank i
         num_tokens_per_rank[i] = (rank_idx == i).sum()
+        # Create boolean mask: True if token has any top-k expert on rank i
         token_sel = (rank_idx == i).max(dim=-1)[0]
+        # Get the total number of tokens assigned to this rank
         count = token_sel.sum().item()
+        # Get indices of selected tokens, sorted by presence (True values first)
         tokens = torch.sort(token_sel.to(torch.int), descending=True)[1]
+        # Sort the first 'count' token indices to maintain consistent ordering
         tokens[:count] = torch.sort(tokens[:count])[0]
+        # Assign sequential positions (0, 1, 2, ...) to tokens going to rank i
         token_idx_in_rank[i][tokens[:count]] = torch.arange(count, dtype=torch.long, device='cuda')
+    # Transpose to [token, rank] layout and convert to int32 for efficiency
     token_idx_in_rank = token_idx_in_rank.T.contiguous().to(torch.int)
+    # Create boolean mask: True where token is assigned to the corresponding rank
     is_token_in_rank = token_idx_in_rank >= 0
+    # Clone local token counts to prepare for global reduction
     gbl_num_tokens_per_rank = num_tokens_per_rank.clone()
+    # Aggregate token counts across all ranks (sum reduction)
     dist.all_reduce(gbl_num_tokens_per_rank, group=group)
 
     ref_num_tokens_per_rank, _, ref_num_tokens_per_expert, ref_is_token_in_rank, _ = \
