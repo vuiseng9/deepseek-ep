@@ -1,0 +1,111 @@
+python tests/test_intranode.py --num-processes 8
+[config] num_tokens=4096, hidden=7168, num_topk=8
+[layout] Kernel performance: 0.041 ms
+
+[testing] Running with BF16, without top-k (async=False, previous=False) ... passed
+[testing] Running with BF16, with top-k (async=False, previous=False) ... passed
+[testing] Running with BF16, without top-k (async=False, previous=False) ... passed
+[testing] Running with BF16, with top-k (async=False, previous=False) ... passed
+[testing] Running with FP8, without top-k (async=False, previous=False) ... passed
+[testing] Running with FP8, with top-k (async=False, previous=False) ... passed
+[testing] Running with BF16, without top-k (async=True, previous=False) ... passed
+[testing] Running with BF16, with top-k (async=True, previous=False) ... passed
+[testing] Running with BF16, without top-k (async=True, previous=False) ... passed
+[testing] Running with BF16, with top-k (async=True, previous=False) ... passed
+[testing] Running with FP8, without top-k (async=True, previous=False) ... passed
+[testing] Running with FP8, with top-k (async=True, previous=False) ... passed
+[testing] Running with BF16, without top-k (async=False, previous=True) ... passed
+[testing] Running with BF16, with top-k (async=False, previous=True) ... passed
+[testing] Running with BF16, without top-k (async=False, previous=True) ... passed
+[testing] Running with BF16, with top-k (async=False, previous=True) ... passed
+[testing] Running with FP8, without top-k (async=False, previous=True) ... passed
+[testing] Running with FP8, with top-k (async=False, previous=True) ... passed
+[testing] Running with BF16, without top-k (async=True, previous=True) ... passed
+[testing] Running with BF16, with top-k (async=True, previous=True) ... passed
+[testing] Running with BF16, without top-k (async=True, previous=True) ... passed
+[testing] Running with BF16, with top-k (async=True, previous=True) ... passed
+[testing] Running with FP8, without top-k (async=True, previous=True) ... passed
+[testing] Running with FP8, with top-k (async=True, previous=True) ... passed
+
+[tuning] SMs 24, NVL chunk 4: 176.58 GB/s (NVL), 907.28 us
+[tuning] SMs 24, NVL chunk 6: 251.57 GB/s (NVL), 636.83 us
+[tuning] SMs 24, NVL chunk 8: 315.10 GB/s (NVL), 508.44 us
+[tuning] SMs 24, NVL chunk 10: 324.93 GB/s (NVL), 493.05 us
+[tuning] SMs 24, NVL chunk 12: 321.71 GB/s (NVL), 497.98 us
+[tuning] SMs 24, NVL chunk 14: 314.33 GB/s (NVL), 509.68 us
+[tuning] SMs 24, NVL chunk 16: 309.06 GB/s (NVL), 518.37 us
+[tuning] SMs 24, NVL chunk 18: 306.64 GB/s (NVL), 522.46 us
+[tuning] SMs 24, NVL chunk 20: 303.95 GB/s (NVL), 527.08 us
+[tuning] SMs 24, NVL chunk 22: 301.56 GB/s (NVL), 531.26 us
+[tuning] SMs 24, NVL chunk 24: 298.72 GB/s (NVL), 536.30 us
+[tuning] SMs 24, NVL chunk 26: 297.98 GB/s (NVL), 537.65 us
+[tuning] SMs 24, NVL chunk 28: 294.84 GB/s (NVL), 543.38 us
+[tuning] SMs 24, NVL chunk 30: 292.21 GB/s (NVL), 548.25 us
+[tuning] SMs 24, NVL chunk 32: 291.91 GB/s (NVL), 548.83 us
+[tuning] SMs 24, NVL chunk default: 251.92 GB/s (NVL), 635.94 us
+[tuning] Best dispatch (FP8): SMs 24, NVL chunk 10, 324.93 GB/s (NVL), t: 493.05 us
+
+[tuning] SMs 24, NVL chunk 4: 339.88 GB/s (NVL), 914.16 us
+[tuning] SMs 24, NVL chunk 6: 320.69 GB/s (NVL), 968.86 us
+[tuning] SMs 24, NVL chunk 8: 315.36 GB/s (NVL), 985.25 us
+[tuning] SMs 24, NVL chunk 10: 313.66 GB/s (NVL), 990.59 us
+[tuning] SMs 24, NVL chunk 12: 311.76 GB/s (NVL), 996.60 us
+[tuning] SMs 24, NVL chunk 14: 309.77 GB/s (NVL), 1003.01 us
+[tuning] SMs 24, NVL chunk 16: 309.88 GB/s (NVL), 1002.67 us
+[tuning] SMs 24, NVL chunk 18: 306.91 GB/s (NVL), 1012.38 us
+[tuning] SMs 24, NVL chunk 20: 305.42 GB/s (NVL), 1017.29 us
+[tuning] SMs 24, NVL chunk 22: 305.12 GB/s (NVL), 1018.31 us
+[tuning] SMs 24, NVL chunk 24: 302.70 GB/s (NVL), 1026.46 us
+[tuning] SMs 24, NVL chunk 26: 299.98 GB/s (NVL), 1035.74 us
+[tuning] SMs 24, NVL chunk 28: 299.37 GB/s (NVL), 1037.85 us
+[tuning] SMs 24, NVL chunk 30: 298.71 GB/s (NVL), 1040.17 us
+[tuning] SMs 24, NVL chunk 32: 296.75 GB/s (NVL), 1047.04 us
+[tuning] SMs 24, NVL chunk default: 320.48 GB/s (NVL), 969.50 us
+[tuning] Best dispatch (BF16): SMs 24, NVL chunk 4, 339.88 GB/s (NVL), t: 914.16 us
+
+[tuning] SMs 24, NVL chunk 1: 81.58 GB/s (NVL), 3808.81 us
+[tuning] SMs 24, NVL chunk 2: 159.35 GB/s (NVL), 1949.83 us
+[tuning] SMs 24, NVL chunk 3: 232.50 GB/s (NVL), 1336.36 us
+[tuning] SMs 24, NVL chunk 4: 249.23 GB/s (NVL), 1246.65 us
+[tuning] SMs 24, NVL chunk 5: 303.81 GB/s (NVL), 1022.70 us
+[tuning] SMs 24, NVL chunk 6: 317.25 GB/s (NVL), 979.36 us
+[tuning] SMs 24, NVL chunk 7: 323.97 GB/s (NVL), 959.04 us
+[tuning] SMs 24, NVL chunk 8: 310.62 GB/s (NVL), 1000.28 us
+[tuning] SMs 24, NVL chunk 9: 302.46 GB/s (NVL), 1027.26 us
+[tuning] SMs 24, NVL chunk 10: 307.04 GB/s (NVL), 1011.93 us
+[tuning] SMs 24, NVL chunk 11: 302.96 GB/s (NVL), 1025.57 us
+[tuning] SMs 24, NVL chunk 12: 298.84 GB/s (NVL), 1039.70 us
+[tuning] SMs 24, NVL chunk 13: 304.35 GB/s (NVL), 1020.87 us
+[tuning] SMs 24, NVL chunk 14: 298.78 GB/s (NVL), 1039.90 us
+[tuning] SMs 24, NVL chunk 15: 296.25 GB/s (NVL), 1048.79 us
+[tuning] SMs 24, NVL chunk 16: 300.92 GB/s (NVL), 1032.50 us
+[tuning] SMs 24, NVL chunk default: 249.48 GB/s (NVL), 1245.38 us
+[tuning] Best combine: SMs 24, NVL chunk 7: 323.97 GB/s (NVL), t: 959.04 us
+
+
+
+Key logs: h100x8
+For config: num_tokens=4096, hidden=7168, num_topk=8/256 (DeepSeek V3 MoE config)
+[tuning] Best dispatch (FP8): SMs 24, NVL chunk 10, 324.93 GB/s (NVL), t: 493.05 us
+[tuning] Best dispatch (BF16): SMs 24, NVL chunk 4, 339.88 GB/s (NVL), t: 914.16 us
+[tuning] Best combine: SMs 24, NVL chunk 7: 323.97 GB/s (NVL), t: 959.04 us
+
+The official landing page captures the benchmark on H800x8
+Dispatch FP8 Bottleneck bandwidth: 153 GB/s
+Combine BF16 Bottleneck bandwidth: 158 GB/s
+
+        Dispatch FP8    Combine BF16
+H800x8  153             158
+H100x8  324.93          323.97
+
+Sustained BW Reasonable? Yes
+H800 (one-way) NVL 200 GB/s, 155 is ~75%
+H100 (one-way) NVL 450 GB/s, 325 is ~72%
+
+Why 24 SMs?
+
+    On H100 GPUs, there are 132 SMs total, but for communication kernels like this, 
+    they're likely using a subset to avoid saturating all GPU resources while testing the NVLink bandwidth. 
+    Using 24 SMs (roughly 18% of the GPU) leaves headroom for the actual communication to be the bottleneck rather than compute.
+    If you wanted to test with different SM counts, you could modify that line to:
+    for i in (16, 24, 32, 48):
