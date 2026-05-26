@@ -1,0 +1,133 @@
+
+# Context: 
+# DeepSeek v4 employed MegaMoE kernel which fuses EP comm and comp into a single kernel.
+# The paper points the kernel to a PR in DeepGEMM https://github.com/deepseek-ai/DeepGEMM/pull/304
+# The PR also cites another PR for microbenchmark https://github.com/deepseek-ai/DeepGEMM/pull/316
+# The ubench does compare to deep_ep via tests/test_mega_moe.py,
+# and the deep_ep used is the new v2.
+# Following is how to build and run the above
+
+# System ubuntu 24.04 on 8xB200
+# nvcc --version 
+# Build cuda_13.0.r13.0/compiler.36424714_0
+
+install-uv
+nw-conda-env dsv4 3.12
+install-torch 130
+
+# Build DeepEP
+# ------------
+git clone https://github.com/vuiseng9/deepseek-ep -b repro-v2 
+
+ls -l /usr/include/infiniband/mlx5dv.h
+if the above doesn't exist,
+        sudo apt-get update
+        sudo apt-get install -y rdma-core libibverbs-dev librdmacm-dev
+        sudo apt-get install -y build-essential
+
+uv pip install nvidia-nvshmem-cu13 ninja
+uv pip install "nvidia-nccl-cu13>=2.30.4" --no-deps
+# IMPORTANT: must use this nccl version
+
+# find your own lib path
+cd $(get-site-packages-path)/nvidia/nvshmem/lib
+ln -s libnvshmem_host.so.3 libnvshmem_host.so
+
+NVSHMEM_DIR=$(get-site-packages-path)/nvidia/nvshmem TORCH_CUDA_ARCH_LIST=10.0 python setup.py install
+
+# Ensure right NCCL is being linked.
+$ pip show deep_ep
+Location: /root/miniforge3/envs/depv2/lib/python3.12/site-packages/deep_ep-2.0.0+723716f-py3.12-linux-x86_64.egg
+cd /root/miniforge3/envs/depv2/lib/python3.12/site-packages/deep_ep-2.0.0+723716f-py3.12-linux-x86_64.egg
+cd deep_ep
+$ ldd _C.cpython-312-x86_64-linux-gnu.so | grep nccl
+        libnccl.so.2 => /root/miniforge3/envs/depv2/lib/python3.12/site-packages/nvidia/nccl/lib/libnccl.so.2 (0x00007546fa200000)
+
+readelf -Ws /root/miniforge3/envs/depv2/lib/python3.12/site-packages/nvidia/nccl/lib/libnccl.so.2 | grep ncclTeamWorld
+   439: 000000000018ee30    31 FUNC    GLOBAL DEFAULT   11 pncclTeamWorld
+   449: 000000000018ee30    31 FUNC    WEAK   DEFAULT   11 ncclTeamWorld
+ 16887: 000000000018ee30    31 FUNC    WEAK   DEFAULT   11 ncclTeamWorld
+ 17044: 000000000018ee30    31 FUNC    GLOBAL DEFAULT   11 pncclTeamWorld
+
+# Run DeepEP
+EP_DISABLE_GIN=1 python tests/elastic/test_ep.py --allow-hybrid-mode 0
+
+
+# Build DeepGEMM
+# ------------
+git clone https://github.com/vuiseng9/deepseek-gemm
+gsui
+./develop.sh
+
+# Not the main tests 
+        uv pip install pytest
+        touch conftest.py
+        pytest pytest tests/test_fp8_fp4.py -v
+
+
+uv pip install tilelang # this will revert the nccl, need reinstall nccl
+uv pip install "nvidia-nccl-cu13>=2.30.4" --no-deps
+
+# Run DeepGEMM tests
+# DeepSeek-V4-Pro per https://github.com/deepseek-ai/DeepGEMM/pull/316
+EP_DISABLE_GIN=1 PYTHONPATH=./ python tests/test_mega_moe.py --num-max-tokens-per-rank 1
+EP_DISABLE_GIN=1 PYTHONPATH=./ python tests/test_mega_moe.py --num-max-tokens-per-rank 512
+EP_DISABLE_GIN=1 PYTHONPATH=./ python tests/test_mega_moe.py --num-max-tokens-per-rank 8192
+EP_DISABLE_GIN=1 PYTHONPATH=./ python tests/test_mega_moe.py --num-max-tokens-per-rank 32768
+
+ > Hidden: 7168
+ > Intermediate: 3072
+ > Experts: 6/384
+
+ > Tokens: 1/1
+ > Buffer: 0.434 GiB
+ > EP:  6/8 |    7 TFLOPS | overlap:    7 TFLOPS, HBM 1822 GB/s, NVL   1 GB/s |  109 us, reduction:  0.0 us | 1.54x legacy
+ > EP:  2/8 |    5 TFLOPS | overlap:    5 TFLOPS, HBM 1209 GB/s, NVL   1 GB/s |  109 us, reduction:  0.0 us | 1.53x legacy
+ > EP:  5/8 |    1 TFLOPS | overlap:    1 TFLOPS, HBM  303 GB/s, NVL   0 GB/s |  109 us, reduction:  0.0 us | 1.52x legacy
+ > EP:  3/8 |   11 TFLOPS | overlap:   11 TFLOPS, HBM 2735 GB/s, NVL   2 GB/s |  109 us, reduction:  0.0 us | 1.53x legacy
+ > EP:  0/8 |   12 TFLOPS | overlap:   12 TFLOPS, HBM 3033 GB/s, NVL   2 GB/s |  109 us, reduction:  0.0 us | 1.52x legacy
+ > EP:  4/8 |    7 TFLOPS | overlap:    7 TFLOPS, HBM 1817 GB/s, NVL   1 GB/s |  109 us, reduction:  0.0 us | 1.52x legacy
+ > EP:  7/8 |   10 TFLOPS | overlap:   10 TFLOPS, HBM 2121 GB/s, NVL   2 GB/s |  109 us, reduction:  0.0 us | 1.54x legacy
+ > EP:  1/8 |    5 TFLOPS | overlap:    5 TFLOPS, HBM  910 GB/s, NVL   1 GB/s |  109 us, reduction:  0.0 us | 1.52x legacy
+
+ > Tokens: 512/512
+ > Buffer: 0.736 GiB
+ > EP:  0/8 | 1075 TFLOPS | overlap: 1098 TFLOPS, HBM 4561 GB/s, NVL 179 GB/s |  374 us, reduction:  7.9 us | 1.50x legacy
+ > EP:  3/8 | 1066 TFLOPS | overlap: 1089 TFLOPS, HBM 4558 GB/s, NVL 177 GB/s |  374 us, reduction:  7.9 us | 1.50x legacy
+ > EP:  2/8 | 1085 TFLOPS | overlap: 1109 TFLOPS, HBM 4562 GB/s, NVL 180 GB/s |  374 us, reduction:  7.9 us | 1.51x legacy
+ > EP:  4/8 | 1108 TFLOPS | overlap: 1132 TFLOPS, HBM 4569 GB/s, NVL 184 GB/s |  374 us, reduction:  7.9 us | 1.50x legacy
+ > EP:  1/8 | 1071 TFLOPS | overlap: 1094 TFLOPS, HBM 4557 GB/s, NVL 178 GB/s |  374 us, reduction:  7.9 us | 1.50x legacy
+ > EP:  6/8 | 1081 TFLOPS | overlap: 1104 TFLOPS, HBM 4564 GB/s, NVL 180 GB/s |  374 us, reduction:  7.9 us | 1.50x legacy
+ > EP:  5/8 | 1088 TFLOPS | overlap: 1111 TFLOPS, HBM 4564 GB/s, NVL 181 GB/s |  374 us, reduction:  7.9 us | 1.50x legacy
+ > EP:  7/8 | 1108 TFLOPS | overlap: 1132 TFLOPS, HBM 4565 GB/s, NVL 184 GB/s |  374 us, reduction:  7.9 us | 1.50x legacy
+
+ > Tokens: 8192/8192
+ > Buffer: 6.772 GiB
+ > EP:  0/8 | 2305 TFLOPS | overlap: 2413 TFLOPS, HBM 1096 GB/s, NVL 393 GB/s | 2808 us, reduction: 126.5 us | 1.52x legacy
+ > EP:  5/8 | 2299 TFLOPS | overlap: 2407 TFLOPS, HBM 1095 GB/s, NVL 392 GB/s | 2806 us, reduction: 126.5 us | 1.52x legacy
+ > EP:  2/8 | 2325 TFLOPS | overlap: 2435 TFLOPS, HBM 1101 GB/s, NVL 396 GB/s | 2807 us, reduction: 126.5 us | 1.52x legacy
+ > EP:  3/8 | 2319 TFLOPS | overlap: 2428 TFLOPS, HBM 1100 GB/s, NVL 395 GB/s | 2806 us, reduction: 126.5 us | 1.52x legacy
+ > EP:  6/8 | 2311 TFLOPS | overlap: 2420 TFLOPS, HBM 1098 GB/s, NVL 394 GB/s | 2808 us, reduction: 126.5 us | 1.52x legacy
+ > EP:  7/8 | 2322 TFLOPS | overlap: 2431 TFLOPS, HBM 1100 GB/s, NVL 396 GB/s | 2807 us, reduction: 126.5 us | 1.52x legacy
+ > EP:  4/8 | 2326 TFLOPS | overlap: 2436 TFLOPS, HBM 1102 GB/s, NVL 397 GB/s | 2806 us, reduction: 126.5 us | 1.52x legacy
+ > EP:  1/8 | 2303 TFLOPS | overlap: 2411 TFLOPS, HBM 1096 GB/s, NVL 392 GB/s | 2807 us, reduction: 126.5 us | 1.52x legacy
+
+ > Tokens: 32768/32768
+ > Buffer: 26.087 GiB
+ > EP:  0/8 | 2432 TFLOPS | overlap: 2554 TFLOPS, HBM  691 GB/s, NVL 416 GB/s | 10633 us, reduction: 505.9 us | 1.59x legacy
+ > EP:  6/8 | 2456 TFLOPS | overlap: 2578 TFLOPS, HBM  696 GB/s, NVL 420 GB/s | 10629 us, reduction: 505.9 us | 1.59x legacy
+ > EP:  5/8 | 2453 TFLOPS | overlap: 2575 TFLOPS, HBM  696 GB/s, NVL 419 GB/s | 10623 us, reduction: 505.9 us | 1.59x legacy
+ > EP:  7/8 | 2439 TFLOPS | overlap: 2561 TFLOPS, HBM  693 GB/s, NVL 417 GB/s | 10630 us, reduction: 505.9 us | 1.59x legacy
+ > EP:  1/8 | 2446 TFLOPS | overlap: 2568 TFLOPS, HBM  694 GB/s, NVL 418 GB/s | 10632 us, reduction: 505.9 us | 1.59x legacy
+ > EP:  4/8 | 2433 TFLOPS | overlap: 2555 TFLOPS, HBM  691 GB/s, NVL 416 GB/s | 10630 us, reduction: 505.9 us | 1.59x legacy
+ > EP:  3/8 | 2446 TFLOPS | overlap: 2569 TFLOPS, HBM  694 GB/s, NVL 418 GB/s | 10631 us, reduction: 505.9 us | 1.59x legacy
+ > EP:  2/8 | 2444 TFLOPS | overlap: 2566 TFLOPS, HBM  694 GB/s, NVL 418 GB/s | 10633 us, reduction: 505.9 us | 1.59x legacy
+
+
+TFLOPS:	Raw measured throughput — 2 * num_recv_tokens * (hidden * intermediate_hidden * 3) / t_fused — covering the 3 matmuls (L1 gate+up projections, L2 down projection)
+overlap: Compute-only throughput, approximating what GEMM achieves if the serial reduce-scatter overhead (t_reduction) is subtracted: tflops * t_fused / (t_fused - t_reduction)
+HBM bandwidth utilization over t_fused, counting weights (FP4), activations (FP8), and outputs (BF16) read/written per expert touched — also scaled by the same approx_factor
+NVLink bandwidth utilization over t_fused, counting dispatch (pull) + combine (write-back): num_recv_tokens * hidden * 3 bytes — also scaled by approx_factor
+Wall-clock time of the fused MegaMoE kernel (t_fused)
+Estimated serial time for the combine/reduce-scatter step: num_tokens * hidden * 2 * (1 + num_topk) / 6.5e12 — this is the overhead subtracted to get the "overlap" numbers
+1.52x legacy	Speedup of the fused kernel vs. the baseline (tilelang + deep_ep separate dispatch/compute/combine)
