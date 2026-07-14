@@ -34,6 +34,7 @@ cd $(get-site-packages-path)/nvidia/nvshmem/lib
 ln -s libnvshmem_host.so.3 libnvshmem_host.so
 
 NVSHMEM_DIR=$(get-site-packages-path)/nvidia/nvshmem TORCH_CUDA_ARCH_LIST=10.0 python setup.py install
+NVSHMEM_DIR=$(get-site-packages-path)/nvidia/nvshmem TORCH_CUDA_ARCH_LIST=9.0 python setup.py install
 
 # Ensure right NCCL is being linked.
 $ pip show deep_ep
@@ -50,7 +51,7 @@ readelf -Ws /root/miniforge3/envs/depv2/lib/python3.12/site-packages/nvidia/nccl
  17044: 000000000018ee30    31 FUNC    GLOBAL DEFAULT   11 pncclTeamWorld
 
 # Run DeepEP
-EP_DISABLE_GIN=1 python tests/elastic/test_ep.py --allow-hybrid-mode 0
+EP_DISABLE_GIN=1 python tests/elastic/test_ep.py --allow-hybrid-mode 0 --num-processes $(nvidia-smi -L | wc -l)
 
 
 # Build DeepGEMM
@@ -70,10 +71,10 @@ uv pip install "nvidia-nccl-cu13>=2.30.4" --no-deps
 
 # Run DeepGEMM tests
 # DeepSeek-V4-Pro per https://github.com/deepseek-ai/DeepGEMM/pull/316
-EP_DISABLE_GIN=1 PYTHONPATH=./ python tests/test_mega_moe.py --num-max-tokens-per-rank 1
-EP_DISABLE_GIN=1 PYTHONPATH=./ python tests/test_mega_moe.py --num-max-tokens-per-rank 512
-EP_DISABLE_GIN=1 PYTHONPATH=./ python tests/test_mega_moe.py --num-max-tokens-per-rank 8192
-EP_DISABLE_GIN=1 PYTHONPATH=./ python tests/test_mega_moe.py --num-max-tokens-per-rank 32768
+EP_DISABLE_GIN=1 PYTHONPATH=./ python tests/test_mega_moe.py --num-max-tokens-per-rank 1     --num-processes $(nvidia-smi -L | wc -l)
+EP_DISABLE_GIN=1 PYTHONPATH=./ python tests/test_mega_moe.py --num-max-tokens-per-rank 512   --num-processes $(nvidia-smi -L | wc -l)
+EP_DISABLE_GIN=1 PYTHONPATH=./ python tests/test_mega_moe.py --num-max-tokens-per-rank 8192  --num-processes $(nvidia-smi -L | wc -l)
+EP_DISABLE_GIN=1 PYTHONPATH=./ python tests/test_mega_moe.py --num-max-tokens-per-rank 32768 --num-processes $(nvidia-smi -L | wc -l)
 
  > Hidden: 7168
  > Intermediate: 3072
