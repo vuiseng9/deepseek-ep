@@ -1,0 +1,54 @@
+
+
+$ cat /etc/lsb-release 
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=24.04
+DISTRIB_CODENAME=noble
+DISTRIB_DESCRIPTION="Ubuntu 24.04.4 LTS"
+
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.126.16             Driver Version: 580.126.16     CUDA Version: 13.0     |
+
+no nvcc or cuda toolkit on the host.
+
+
+setup cuda using conda.
+
+nw-conda-env h100 3.12
+install-torch 130
+install-cuda-toolkit-conda 13.0
+
+$ nvcc --version
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Aug_20_01:58:59_PM_PDT_2025
+Cuda compilation tools, release 13.0, V13.0.88
+Build cuda_13.0.r13.0/compiler.36424714_0
+
+Follow steps in repro_epv2_megamoe.txt except for few notes below.
+
+massedcompute apt registry issues.
+sudo cp -r /etc/apt /etc/apt.bak
+sudo grep -rl "mcache-dsm.massedcompute.com" /etc/apt/ | xargs -r sudo sed -i 's|https://mcache-dsm.massedcompute.com/debian-archive|http://archive.ubuntu.com/ubuntu|g'
+sudo apt update
+sudo apt install -y rdma-core libibverbs-dev librdmacm-dev build-essential
+
+if infiniband/mlx5dv.h found in wrong place, or libnccl
+        NVSHMEM_DIR=$(get-site-packages-path)/nvidia/nvshmem \
+        TORCH_CUDA_ARCH_LIST=9.0 \
+        CPATH=/usr/include:$CPATH \
+        LIBRARY_PATH=$(get-site-packages-path)/nvidia/nccl/lib:$LIBRARY_PATH \
+        python setup.py install
+
+EP_DISABLE_GIN=1 python tests/elastic/test_ep.py --allow-hybrid-mode 0 --num-processes 2
+
+# NEED SXM5, pcie will error out.
+
+
+
+# Build DeepGEMM
+# ------------
+git clone https://github.com/vuiseng9/deepseek-gemm
+git checkout host
+gsui
+./develop.sh
